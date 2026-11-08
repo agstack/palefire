@@ -52,10 +52,19 @@ def parse_source(src: str):
     return int(m.group(1)), m.group(2) if m.group(2) else "single"
 
 
-def load_raw_legend(raw_dir: str, page_num: int) -> List[str]:
-    """Load filtered legend lines from raw/page-NN/legend.txt."""
+def load_raw_legend(raw_dir: str, page_num: int, side: str = None) -> List[str]:
+    """Load filtered legend lines from raw/page-NN/side.txt or raw/page-NN/legend.txt."""
     if page_num is None:
         return []
+    # If side-specific legend or txt exists, prefer it
+    if side:
+        side_legend = os.path.join(raw_dir, f"page-{page_num:02d}", f"{side}_legend.txt")
+        if os.path.exists(side_legend):
+            with open(side_legend, "r", encoding="utf-8") as f:
+                lines = [line.strip() for line in f if line.strip()]
+                if lines:
+                    return lines
+
     path = os.path.join(raw_dir, f"page-{page_num:02d}", "legend.txt")
     if not os.path.exists(path):
         return []
@@ -128,13 +137,31 @@ def split_and_convert_to_jsonld(
             original_filename = raw_title_data.get("original_filename", src)
             color_anomaly_mapping = raw_title_data.get("color_anomaly_mapping", {})
 
-        if page_num not in raw_legend_cache:
-            raw_legend_cache[page_num] = load_raw_legend(raw_dir, page_num)
-        page_legend_lines = raw_legend_cache[page_num]
-
         # Convert full_page-05.png_left to debug_full_page-05_left.png
         legend_key = "debug_" + src.replace(".png_left", "_left.png").replace(".png_right", "_right.png")
         legend = legends.get(legend_key, [])
+
+        # Build panel-specific legend: prefer structured color legend from this specific panel
+        panel_legend_lines = []
+        if legend:
+            for item in legend:
+                col = item.get("color", "")
+                vr = item.get("value_range", "")
+                ar = item.get("absolute_range", "")
+                lb = item.get("label", "")
+                parts = []
+                if vr and vr != "N/A":
+                    parts.append(str(vr))
+                if ar and ar != "N/A":
+                    parts.append(str(ar))
+                if lb and lb != "N/A" and lb != "Unknown":
+                    parts.append(str(lb))
+                desc = " - ".join(parts) if parts else "N/A"
+                panel_legend_lines.append(f"{col}: {desc}")
+
+        # If no color legend was found for this panel, fallback to raw OCR legend text for the side/page
+        if not panel_legend_lines:
+            panel_legend_lines = load_raw_legend(raw_dir, page_num, side)
 
         # Build a fast lookup for this map's color legend (Gemini)
         legend_lookup = {item["color"]: item for item in legend}
@@ -260,7 +287,7 @@ def split_and_convert_to_jsonld(
             "page": page_num,
             "side": side,
             "variable_page_title": raw_title,
-            "legend": page_legend_lines,
+            "legend": panel_legend_lines,
             "@graph": graph,
         }
 
@@ -277,7 +304,7 @@ def split_and_convert_to_jsonld(
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False)
 
-        print(f"Wrote {filepath} (legend lines: {len(page_legend_lines)})")
+        print(f"Wrote {filepath} (legend lines: {len(panel_legend_lines)})")
 
     return len(grouped)
 
