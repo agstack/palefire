@@ -3050,5 +3050,56 @@
       "absolute_range": "> 100 mm",
       "label": "DEFICIT EXTREMO"
     }
-  ]
+  ],
+  "debug_full_page-01_left.png": [
+    {
+      "color": "Dark Red",
+      "value_range": "> 60%",
+      "absolute_range": "N/A",
+      "label": "Muy sobre lo normal"
+    },
+    {
+      "color": "Red",
+      "value_range": "40% a 60%",
+      "absolute_range": "N/A",
+      "label": "Sobre lo normal"
+    },
+    {
+      "color": "Orange",
+      "value_range": "20% a 40%",
+      "absolute_range": "N/A",
+      "label": "Levemente sobre lo normal"
+    },
+    {
+      "color": "Light Yellow",
+      "value_range": "0% a 20%",
+      "absolute_range": "N/A",
+      "label": "Normal a sobre lo normal"
+    },
+    {
+      "color": "White",
+      "value_range": "-20% a 0%",
+      "absolute_range": "N/A",
+      "label": "Normal a bajo lo normal"
+    },
+    {
+      "color": "Light Blue",
+      "value_range": "-40% a -20%",
+      "absolute_range": "N/A",
+      "label": "Levemente bajo lo normal"
+    },
+    {
+      "color": "Blue",
+      "value_range": "-60% a -40%",
+      "absolute_range": "N/A",
+      "label": "Bajo lo normal"
+    },
+    {
+      "color": "Dark Blue",
+      "value_range": "< -60%",
+      "absolute_range": "N/A",
+      "label": "Muy bajo lo normal"
+    }
+  ],
+  "debug_full_page-01_right.png": []
 }

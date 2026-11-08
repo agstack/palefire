@@ -30,7 +30,7 @@ services:
       start_period: 30s
     restart: unless-stopped
 
-  # Ollama LLM Server
+  # Ollama LLM Server (optional profile if external Ollama on 10.147.18.24:11434 is used)
   ollama:
     image: ollama/ollama:latest
     container_name: palefire-ollama
@@ -40,6 +40,8 @@ services:
       - ollama_data:/root/.ollama
     networks:
       - palefire-network
+    profiles:
+      - local-ollama
     healthcheck:
       test: [ "CMD-SHELL", "curl -f http://localhost:11434/api/tags || exit 1" ]
       interval: 30s
@@ -89,14 +91,16 @@ services:
 
       # LLM Configuration
       - LLM_PROVIDER=ollama
-      - OLLAMA_BASE_URL=http://ollama:11434/v1
-      - OLLAMA_MODEL=deepseek-r1:7b
-      - OLLAMA_SMALL_MODEL=deepseek-r1:7b
+      - OLLAMA_HOST=http://10.147.18.24:11434
+      - OLLAMA_BASE_URL=http://10.147.18.24:11434/v1
+      - OLLAMA_MODEL=gemma4:31b-cloud
+      - OLLAMA_SMALL_MODEL=gemma4:e2b
 
       # Embedder Configuration
       - EMBEDDER_PROVIDER=ollama
       - OLLAMA_EMBEDDING_MODEL=nomic-embed-text
       - OLLAMA_EMBEDDING_DIM=768
+      - OLLAMA_EMBEDDING_BASE_URL=http://10.147.18.24:11434/v1
 
       # Search Configuration
       - DEFAULT_SEARCH_METHOD=question-aware
@@ -125,8 +129,8 @@ services:
     depends_on:
       neo4j:
         condition: service_healthy
-      ollama:
-        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - palefire-network
     healthcheck:
@@ -152,10 +156,12 @@ services:
       - QDRANT_HOST=qdrant
       - QDRANT_PORT=6333
       - LLM_PROVIDER=ollama
-      - OLLAMA_BASE_URL=http://ollama:11434/v1
-      - OLLAMA_MODEL=deepseek-r1:7b
+      - OLLAMA_HOST=http://10.147.18.24:11434
+      - OLLAMA_BASE_URL=http://10.147.18.24:11434/v1
+      - OLLAMA_MODEL=gemma4:31b-cloud
       - EMBEDDER_PROVIDER=ollama
       - OLLAMA_EMBEDDING_MODEL=nomic-embed-text
+      - OLLAMA_EMBEDDING_BASE_URL=http://10.147.18.24:11434/v1
       - NER_ENABLED=true
       - NER_USE_SPACY=true
       - SPACY_MODEL=en_core_web_sm
@@ -165,8 +171,6 @@ services:
       - ./data:/app/data
     depends_on:
       neo4j:
-        condition: service_healthy
-      ollama:
         condition: service_healthy
       qdrant:
         condition: service_started

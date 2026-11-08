@@ -1,0 +1,2156 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "sc": "https://schema.org/"
+  },
+  "@type": "cr:Dataset",
+  "name": "PERSPECTIVA CLIMATICA ESTACIONAL Agosto - Noviembre 2026 HONDURAS",
+  "description": "Dataset extracted from map images/PDF pages.",
+  "creator": {
+    "@type": "Organization",
+    "name": "<—) CENAOS / Secretaria de Gestion de Riesgos y / Contingencias Nacionales COPECO / CENTRO NACIONAL DE ESTUDIOS / ATMOSFERICOS, OCEANICOS Y SISMICOS / CENAOS"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "pages_data_csv",
+      "name": "pages_data.csv",
+      "contentUrl": "https://mcp.dev.codata.org/vault/GyTyOS3wX6f6pUzMhpJQ.md",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_2_files",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-02_fullpage_md",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/sPuL8GIeHyiyB4SPf3syig.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-02_fullpage_txt",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/oPstX2HIe9UF4dph6jlUg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-02_legend_txt",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/xyPaKACL4JkFsJz6tfMeDQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-02_left_txt",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/kJ2u5ummzEAG0wJUaBGyAg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-02_right_txt",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/U6TCNDIhjHG2mSC9LvoIg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_2_left_Wn_yak_ixaa_L_Page_2_json",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/0Ai0aUfF8e8aka72QszE5g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_2_right_n_29_APR_20726_Page_2_json",
+      "name": "Temperatura superficial del Mar (3) CENAOS Week centered oan 79 APR 2076 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/GBcsnrh3C42LRc1zikKcIA.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_2_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_3_files",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-03_fullpage_md",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Lm7iuRBHfSn9F0d5zVrcsw.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-03_fullpage_txt",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/iRq7pcmvFDEk2OcQsRLhXA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-03_legend_txt",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/mLGCVMyC3odICle0UHHYGg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-03_left_txt",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/TtB5HjaBdWyfR6vsxJ3cg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-03_right_txt",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/JB8sXj6IklTZDxNYvyzn8w.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_3_left_REPUBLICA_DE_HONDURAS_Page_3_json",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/pQYKpDZIvGsSaLZW7Oe5g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_3_right_ENSO_from_Jul_2026_Page_3_json",
+      "name": "CENAOS Pronostico SST en la region Nino 3.4, IRI - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/L2yQE8jFAPyGbu8WU1jIA.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_3_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_4_files",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom..."
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-04_fullpage_md",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/2yqv11D3lcNz7f1hqXoQgw.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-04_fullpage_txt",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/0f0ZT6qRq7KjLy7D4ik6yw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-04_legend_txt",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/EntcluH22FxBnNixbO3Fw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-04_left_txt",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/yKAMkM7KKtRBY2liHR1cIA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-04_right_txt",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/yRlYd8suYwTOHaKPlzRpSQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_4_left_Pronostico_de_anomalia_de_lluvia_Ago_2026_Pronostico_de_anom_json",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/dTOfe5bLUngAQG1Ev0kqiQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_4_right_de_lluvia_sep_2026_Pronostico_de_anomalia_de_Iluvia_oct_2026_json",
+      "name": "Pronostico de anomalias de lluvia NMME \"Pronostico de anomalia de Iluvia (%), \"Pronostico de anom... - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/SPQhsNrksGGFUqU97frww.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_4_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_5_files",
+      "name": "22N 21N"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-05_fullpage_md",
+      "name": "22N 21N - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Qg3UpkCh9qBtVzJlXpPjVA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-05_fullpage_txt",
+      "name": "22N 21N - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/PjAAgGwAWY7yJsk2rGwoA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-05_legend_txt",
+      "name": "22N 21N - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/DkeoHRVWoaDFqXOF2MQ0Q.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-05_left_txt",
+      "name": "22N 21N - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/LamgjS0Rc66ppPbpYhqA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-05_right_txt",
+      "name": "22N 21N - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/VU3qLnGfvv74OL1Kv74EA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_5_left_Pronostico_de_anml_de_temperatura_C_ago_2026_NMME_Page_5_json",
+      "name": "22N 21N - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/YWYREC2vxqu0QfSkx2kESw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_5_right_Pronostico_de_anomalias_de_Temperatura_Page_5_json",
+      "name": "22N 21N - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/LCIfEWcn7fZAoj5m4B9G2g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_5_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_6_files",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ..."
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-06_fullpage_md",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/vIEe2mwnpr4ikmzGXd4OQ.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-06_fullpage_txt",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/uW0Ee0JXR6K79aaF9Yg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-06_legend_txt",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Q8vBMP5uwiDQCi3l6j3big.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-06_left_txt",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/4SpLjoX4Ym2wYSVlZRQWQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-06_right_txt",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/jw3GT7jo7138BCRVZI6Vw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_6_left_REPUBLICA_DE_HONDURAS_Page_6_json",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/R6TZcemjAqKZJGhyU5hqTw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_6_right_Forecast_start_is_01_07_26_climate_period_is_1993_2016_Shade_json",
+      "name": "Pronostico de anomalias de lluvia y temp, modelo Europeo ; CENAOS ECMWF Seasonal Forecast System ... - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/lli0fhyBGOQxxshAT0OQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_6_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_7_files",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-07_fullpage_md",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Wsu82hl19DEzl5wNfONqA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-07_fullpage_txt",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Celwes1vMYBui8Oi6z0dA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-07_legend_txt",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/eK7Dpx6ezx5Tr3mGLpA9wA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-07_left_txt",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/oLaLo0smPrkz0t25TlbJw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-07_right_txt",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ZWx3cwmevRzjN0aIA1H2Tg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_7_left_REGISTRO_DE_LLUVIA_ACUMULADA_Page_7_json",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/EAWzhH0iSaL0r9bYGh9jw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_7_right_ANOMALIA_Page_7_json",
+      "name": "Registro de lluvia mayo 89°O 88°O 87°0 86°O 85°O 84°O 83°O 89°O 88°O 87°0 86°O 85°O 84°O 83°O - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/qniutRbqfr597mlBdzk8w.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_7_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_8_files",
+      "name": "16°N 15°N"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-08_fullpage_md",
+      "name": "16°N 15°N - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/8rnWLNV1htwEPX22useA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-08_fullpage_txt",
+      "name": "16°N 15°N - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/qTA52DeXMeCogP8Wlerjw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-08_legend_txt",
+      "name": "16°N 15°N - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/m3VHIA5v8lRMXbxw79HMg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-08_left_txt",
+      "name": "16°N 15°N - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/WHh5Jh7tRQOF2dULVBlT8g.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-08_right_txt",
+      "name": "16°N 15°N - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/3wYeZlwAHmL0hh7wSrJS1w.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_8_left_REPUBLICA_DE_HONDURAS_Page_8_json",
+      "name": "16°N 15°N - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/fZ9B9w7alwVTPPVnjBew.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_8_right_ANOMALIA_Page_8_json",
+      "name": "16°N 15°N - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/seuGUCUT7LBEBpDazK2WFg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_8_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_9_files",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-09_fullpage_md",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/zGK1oblYaUSCLYAaE2wA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-09_fullpage_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/XtYiNG5uKyLunPTrKvgcHQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-09_legend_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/oMjYGvQol4zyvvcPZg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-09_left_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/CbJmcBY3Db089OZH1HnfA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-09_right_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/aASGYSgZ88MAwZmJJ7Q4VA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_9_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_GQ_GOBIERNO_v1_cenaos_Page_9_json",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/F8ZtEGYkfngug5gpu4SEg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_9_right_JULIO_2026_d_sees_Page_9_json",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/3TFP1CRYLVd89xIQGzBkw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_9_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_10_files",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-10_fullpage_md",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/kyM9jaeAHdacIOAFVLmVvA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-10_fullpage_txt",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/BqohPQqiRoxJwoTodt72A.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-10_legend_txt",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/8lxwpwnX29a7FqlzWYtKA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-10_left_txt",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/P1VqWUUshGglab1MwGW7sA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-10_right_txt",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/oZ145JAJYGeDZBvLthgJw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_10_left_REGISTRO_DE_LLUVIA_ACUMULADA_GOBIERNO_on_6_cENAos_Page_10_json",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/XCWCnOmkG4TsqBJuEozfg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_10_right_REGISTRO_DE_LLUVIA_ACUMULADA_GOBIERNO_ori_Page_10_json",
+      "name": "Registro de lluvia julio 89°O 88°O 87°0 86°O 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°O 83°0 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/GE79mHo1lVpROYiKlQShOw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_10_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_11_files",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-11_fullpage_md",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/9GROcgw1c8CtfGZWF8sfQ.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-11_fullpage_txt",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/DBpZLRb7aDBhXk9bBKqiw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-11_legend_txt",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ssA2jpf14EonO8NL4TuGog.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-11_left_txt",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/fbpW3113DNCxasIjyLrWFQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-11_right_txt",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/uMUmdE5lgghM3bkzfzyg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_11_left_Pronostico_de_anomalias_de_Lluvia_Page_11_json",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/2OKlatWpZ0e3mIR9DLF3g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_11_right_Pronostico_de_anomalias_de_Temperatura_Page_11_json",
+      "name": "Registro de lluvia julio NDVI anomaly = NDVI anomaly me otta - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/X6j8srkIVoC6S1Ox5e42g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_11_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_12_files",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-12_fullpage_md",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/H278bGYG0uTKcTX06G70dQ.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-12_fullpage_txt",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/OIfBfFnM2BO9VhYCX2QQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-12_legend_txt",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/uIGldHqC20WXTxhqfxdreA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-12_left_txt",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/kd9Ufk93xXT2Z7EWsc27w.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-12_right_txt",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/K3HHlmscopfm5t8H3IikIQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_12_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_Page_12_json",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/F68qqj5frn6vvncNifVAzQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_12_right_NORMA_CLIMATICA_1991_2020_Page_12_json",
+      "name": "GOBIERNO peta REPUBLICA DE HONDURAS - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/XhiO5WpgmyxSEiFiPn9wg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_12_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_13_files",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-13_fullpage_md",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/QUJacrEUAIhfppz5aGYgA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-13_fullpage_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/wxH6nI8ohtJnOqY0orpQQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-13_legend_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/pUm7lEQ10U9NyABgpo4mgQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-13_left_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Po3JeEDYRb8Gb6z4JyVMQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-13_right_txt",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/6VpqknZ5joYAvQ05ISQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_13_left_REPUBLICA_DE_HONDURAS_Page_13_json",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/F8ZtEGYkfngug5gpu4SEg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_13_right_AGOSTO_2026_Page_13_json",
+      "name": "LLUVIA ESTIMADA POR SATELITE Y ESTACIONES, Analogos 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/3TFP1CRYLVd89xIQGzBkw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_13_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_14_files",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-14_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/2BivPNHEMypGhPBLJtaq3Q.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-14_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/3iV4zDj2Sy2Ev3sXImSHng.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-14_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ubdZPzOvz7cxObGklB0eWA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-14_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/QfCK18am1io7mwq0TJuOQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-14_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/AOqdszanwGaZvZMGGj6lA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_14_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_AY_cosmenom_BM_cENAOS_Page_14_json",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/6UtApjrfJOvjt41YPyulg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_14_right_NORMA_CLIMATICA_1991_2020_Page_14_json",
+      "name": "PRONOSTICO DE PRECIPITACION 89°0 88°0 87°0 86°0 85°0 84°0 83°0 89°0 88°0 870 86°0 85°0 84°0 83°0 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/OFeuqBfBLvMjdSJB6XYow.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_14_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_15_files",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-15_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/r64Xn0BldEs9vul7GxPS8w.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-15_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/1aExThvxgK91rd3sIjv6sQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-15_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/tghTHiO1RIFgT0j9A6sg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-15_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/VdEvfZvC3rVUjfRHRx4w0Q.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-15_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/WZkTmU7FFoYbw6xhOEv5wA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_15_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_AY_cosmenom_BM_cENAOS_Page_15_json",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Qzvmpcpg6dtZrWNKAvCX2g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_15_right_SEPTIEMBRE_2026_Page_15_json",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/oQ7e8IcQCyQ9lHtgQSZwfw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_15_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_16_files",
+      "name": "16°N 15°N"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-16_fullpage_md",
+      "name": "16°N 15°N - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/WqXmtBfiyVPaYBFC2uDIA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-16_fullpage_txt",
+      "name": "16°N 15°N - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/seWXEBiPqnpNsKLxAsnDA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-16_legend_txt",
+      "name": "16°N 15°N - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/B0Jjf4lGXILqYr7Z623Q.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-16_left_txt",
+      "name": "16°N 15°N - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/2FVycP38teUW9lG41JoeQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-16_right_txt",
+      "name": "16°N 15°N - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ufyPhKM6ECj33bFD5Z9vZg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_16_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_AY_commanon_Page_16_json",
+      "name": "16°N 15°N - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/fZ9B9w7alwVTPPVnjBew.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_16_right_NORMA_CLIMATICA_1991_2020_Page_16_json",
+      "name": "16°N 15°N - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/seuGUCUT7LBEBpDazK2WFg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_16_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_17_files",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-17_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/N65vXM453EEGpxqpYvyYzg.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-17_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/MVuCSn7zEtpMD2bVJxD2Uw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-17_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ph6ZIvI6HdTV0y5zLEm0g.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-17_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ucGxOMt9AEDZyXDoFbZLIg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-17_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Plv8JTx5Z3d3Ys4BbHYHA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_17_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_2_commen_Page_17_json",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Qzvmpcpg6dtZrWNKAvCX2g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_17_right_OCTUBRE_2026_ft_me_ee_Page_17_json",
+      "name": "PRONOSTICO DE PRECIPITACION ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/oQ7e8IcQCyQ9lHtgQSZwfw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_17_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_18_files",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-18_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/JWxN9Ik8yWyMsSz6OxZvdg.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-18_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/FIaGV4cN8nJtoxlsaelA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-18_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/UVqqVPwl2LRVNuQkr6sbHg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-18_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/g5mOAADhXqZ600r4vkHOXw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-18_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/PeRxyBdR0FgkEFCBxUQw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_18_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_2_comenrons_cenaos_Page_18_json",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Ke37xFnhmukRSGytg3Sd3g.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_18_right_NOVIEMBRE_fo_SB_corm_Page_18_json",
+      "name": "PRONOSTICO DE PRECIPITACION 89°O 88°O 87°0 86°0 85°O 84°0 83°0 89°O 88°O 87°0 86°O 85°O 84°0 83°0 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/AsdgBVDmZ4e90hBHuXppA.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_18_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_19_files",
+      "name": "16°N 15°N"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-19_fullpage_md",
+      "name": "16°N 15°N - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/o0WO9JBUQ7C1a9nMMiAEA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-19_fullpage_txt",
+      "name": "16°N 15°N - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/qnG7v6iOsclyJ1PUgdgbQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-19_legend_txt",
+      "name": "16°N 15°N - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/22LNMKcl3qUP1OmUcoUPMw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-19_left_txt",
+      "name": "16°N 15°N - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/f34FvvfKJYJezv3jCM7jQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-19_right_txt",
+      "name": "16°N 15°N - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/tBEP00Vzk3mkbZDfvU9f1Q.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_19_left_PRONOSTICO_DE_LLUVIA_ACUMULADA_2_comenrons_cenaos_Page_19_json",
+      "name": "16°N 15°N - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/fZ9B9w7alwVTPPVnjBew.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_19_right_NOVIEMBRE_2026_Page_19_json",
+      "name": "16°N 15°N - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/seuGUCUT7LBEBpDazK2WFg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_19_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_20_files",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-20_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/xM5twxGzf7R3zVxwvPm2FQ.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-20_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ow68bBJsP7DDZ5jBCUdNw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-20_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/YurRVKdOv4jNvtYiGLJ6lw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-20_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/i7VWppjprwsSDoGax3XgSw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-20_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/W0ds3Pcg5NzzqJo1OQvA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_20_left_REPUBLICA_DE_HONDURAS_Page_20_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Swg385e95HiJSrGiMwoLlQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_20_right_Pronostico_de_anomalias_de_Temperatura_Page_20_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/RLfTneDyYM9jtXHYE0ne2w.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_20_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_21_files",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-21_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/7dsoDaE2JEKaYvGN5Pe0w.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-21_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/L9EdeHj4XHDA8lRi5AzxA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-21_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/pLmOBHxJzGBeOAsOqBR3w.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-21_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/k4x8f130Zpw1AyuK4SgcPQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-21_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/7GW0ruSWaCfc9P3HJIKw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_21_left_PUBLICA_DE_HONDURAS_Page_21_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/Swg385e95HiJSrGiMwoLlQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_21_right_Pronostico_de_anomalias_de_Temperatura_Page_21_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/RLfTneDyYM9jtXHYE0ne2w.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_21_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_22_files",
+      "name": "n ©"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-22_fullpage_md",
+      "name": "n © - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/BKc7jno9TdX9DKzKNTNE2w.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-22_fullpage_txt",
+      "name": "n © - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/p6FtXCVq33C0McDfizYOSg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-22_legend_txt",
+      "name": "n © - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/aQr93OsnJz8QqccXo2TmQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-22_left_txt",
+      "name": "n © - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/pCbJiRx8EaWgBAEKu4wHwA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-22_right_txt",
+      "name": "n © - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/VivNskRH23LP5I80Tkceg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_22_left_Pronostico_de_lluvia_c_5_dias_Page_22_json",
+      "name": "n © - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/nM3g49kuQe7vwVZbFSSw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_22_right_Pronostico_de_lluvia_c_5_dias_Page_22_json",
+      "name": "n © - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/bRvlRaARDbfMf4zI1uRg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_22_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_23_files",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-23_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/pDpRPRdYL9ZHCZIl9uBSA.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-23_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/aRvfS3OzzPwIcCJ3YrAC6Q.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-23_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/VHpp1PS5lM5dvDKPgTMlWw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-23_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/BHWFEjj49SYhC0VtJ7MlLg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-23_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/CJhmQhwaVxTv5rNGeFmzg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_23_left_ANOS_ANALOGOS_1965_1972_1982_1997_2015_y_2023_Page_23_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/it7qxFu4lTA8IJmc9c1esg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_23_right_Pronostico_de_anomalias_de_Temperatura_Page_23_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/NeN2bwYHgvYtNW6D1fQVQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_23_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_24_files",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-24_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/dZ9S7pr1C6nd6vJZvbhLOw.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-24_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/7ZPp3LDKqSaomLhLAaJfg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-24_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/FnmhxxWTQhgtoXwFDbTg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-24_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/1aLHOdT1t2KQr5P8dTzig.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-24_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/3YwmeTmaswLGCfMRA1hw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_24_left_Pronostico_de_lluvia_c_5_dias_S_Page_24_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/it7qxFu4lTA8IJmc9c1esg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_24_right_Pronostico_de_lluvia_c_5_dias_La_Page_24_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/NeN2bwYHgvYtNW6D1fQVQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_24_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_25_files",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-25_fullpage_md",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/JEngqE0fy21vKPjFEtizhw.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-25_fullpage_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/RUP500PddvvyjWwBmSoiag.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-25_legend_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/ElM755wsQExD5F8rida6GQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-25_left_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/lAnQte5z2FDIGKFucjJc2A.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-25_right_txt",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/JZquAm931rZGl6OXK3eOA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_25_left_ANOS_ANALOGOS_1965_1972_1982_1997_2015_y_2023_Page_25_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/it7qxFu4lTA8IJmc9c1esg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_25_right_dias_La_Ceiba_2026_Page_25_json",
+      "name": "PRONOSTICO DE PRECIPITACION CADA 5 DIAS ANOS ANALOGOS 1965, 1972, 1982, 1997, 2015 y 2023 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/NeN2bwYHgvYtNW6D1fQVQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_25_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_26_files",
+      "name": "PE CENAOS"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-26_fullpage_md",
+      "name": "PE CENAOS - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/zXVcNuWpOGC4s4ETT3snQ.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-26_fullpage_txt",
+      "name": "PE CENAOS - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/RjJMgehljcbsaAfxgdAU0g.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-26_legend_txt",
+      "name": "PE CENAOS - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/dYSCPzpTDxcspxnLmwpb6w.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-26_left_txt",
+      "name": "PE CENAOS - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/rqPxQV9YyfMdXx03rZgOQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-26_right_txt",
+      "name": "PE CENAOS - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/LfPylIK5SLqu6eqZGNuzA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_26_left_Pronostico_de_lluvia_c_5_dias_Page_26_json",
+      "name": "PE CENAOS - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/b5XKq54etryFbg9Pa3ZGw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_26_right_Pronostico_de_lluvia_c_5_dias_Page_26_json",
+      "name": "PE CENAOS - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/nYNSEJSMH8BmlCF6H6O3Q.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_26_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_27_files",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-27_fullpage_md",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/SCU0CFn8Os6UkJcM4UGUZQ.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-27_fullpage_txt",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/06djqqrajpfyg3sST4FA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-27_legend_txt",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/wDuckHJ90oPJJ3QpLdGcdA.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-27_left_txt",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/84G73XD4ktayJRm2dak1Kg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-27_right_txt",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/9MQZjTcfT4v6MGEkrc0CQ.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_27_left_Pronostico_de_anomalias_de_Lluvia_Page_27_json",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/a4qXIiQC8jjnVP7aLySg.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_27_right_ww_REPUBLICA_DE_HONDURAS_s_2_Page_27_json",
+      "name": "CENAOS g9\"0 88°O 87\"0 86\"O 85\"0 84°0 - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/lboqkC19gwjduc2USizvw.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_27_files"
+      }
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "page_28_files",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_data_markdowns_page-28_fullpage_md",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - Markdown",
+      "contentUrl": "https://mcp.dev.codata.org/vault/SOyFNfVCM0LjiWDzsrfHw.md",
+      "encodingFormat": "text/markdown",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-28_fullpage_txt",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - fullpage.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/9cwX2sySxlGVcV9m6fIagw.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-28_legend_txt",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - legend.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/YlAGr5nvur4kgoVfUkovg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-28_left_txt",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - left.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/9Xlrh3MT99VJ85aLVo1vQg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_page-28_right_txt",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - right.txt",
+      "contentUrl": "https://mcp.dev.codata.org/vault/XOebCoZca0dLFLd3Il9oJg.md",
+      "encodingFormat": "text/plain",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_28_left_PUBLICA_DE_HONDURAS_Page_28_json",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - Left Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/c1AyGBuBdQaP7Y8R1bdfww.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "data_points_page_28_right_HI_Forecast_mean_Standard_deviation_IJ_Climate_mean_Page_28_json",
+      "name": "GOBIERNO pr1a /_\\ REPUBLICA DE HONDURAS - Right Data",
+      "contentUrl": "https://mcp.dev.codata.org/vault/LjCMu7PdjZFANTe3nxoQ.jsonld",
+      "encodingFormat": "application/json",
+      "containedIn": {
+        "@id": "page_28_files"
+      }
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "page_data",
+      "name": "page_data",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/page_num",
+          "name": "page_num",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "page_num"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/fullpage_txt_file",
+          "name": "fullpage_txt_file",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "fullpage_txt_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/legend_txt_file",
+          "name": "legend_txt_file",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "legend_txt_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/left_txt_file",
+          "name": "left_txt_file",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "left_txt_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/right_txt_file",
+          "name": "right_txt_file",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "right_txt_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/left_data_point_file",
+          "name": "left_data_point_file",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "left_data_point_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "page_data/right_data_point_file",
+          "name": "right_data_point_file",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "pages_data_csv"
+            },
+            "extract": {
+              "column": "right_data_point_file"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

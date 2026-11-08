@@ -46,6 +46,12 @@ pytest-mock>=3.11.0
 httpx>=0.24.0  # For FastAPI testing and async Ollama requests
 nest-asyncio>=1.5.0  # For nested asyncio event loops
 
+# PDF & Image extraction
+pymupdf
+rdflib
+ollama
+Pillow
+
 # Ghostwriter Dependencies
 qdrant-client==1.16.2
 sentence-transformers==2.2.2
@@ -59,3 +65,6 @@ mcp
 
 
 
+opencv-python-headless
+geopandas
+unidecode

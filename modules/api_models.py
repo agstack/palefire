@@ -192,7 +192,20 @@ class FileParseResponse(BaseModel):
     verified: bool = Field(False, description="Whether the keywords were verified by LLM")
     error: Optional[str] = Field(None, description="Error message if parsing failed")
     file_type: Optional[str] = Field(None, description="Detected file type")
+    episodes: Optional[List[Dict[str, Any]]] = Field(None, description="Extracted episodes or structured vision data")
     timestamp: str
+
+
+class ParseUrlRequest(BaseModel):
+    """URL parsing request."""
+    url: str = Field(..., description="URL to fetch and parse (web page or PDF)")
+    timeout: int = Field(30, description="HTTP request timeout in seconds")
+    extract_keywords: bool = Field(False, description="Extract keywords from content")
+    keywords_method: str = Field("combined", description="Keyword extraction method")
+    num_keywords: int = Field(20, description="Number of keywords to extract")
+    vision_extract: bool = Field(False, description="Run Computer Vision extraction if the URL points to a PDF")
+    vision_model: str = Field("gemma4:31b-cloud", description="Vision model for PDF image extraction")
+
 
 
 # ============================================================================

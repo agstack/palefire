@@ -43,6 +43,7 @@ from modules.api_models import (
     KeywordInfo,
     KeywordExtractionResponse,
     FileParseResponse,
+    ParseUrlRequest,
     AgentStatusResponse,
     EntityExtractionRequest,
     EntityExtractionResponse,
@@ -645,6 +646,131 @@ async def parse_file(
         raise HTTPException(status_code=500, detail=f"File parsing failed: {str(e)}")
 
 
+@app.post("/parse-url", response_model=FileParseResponse)
+async def parse_url_endpoint(req: ParseUrlRequest):
+    """
+    Parse a web URL or download and process a PDF document.
+    Supports Computer Vision extraction for maps and climatological data when vision_extract=True.
+    """
+    url = req.url.strip()
+    if not url:
+        raise HTTPException(status_code=400, detail="URL must not be empty")
+
+    import urllib.parse
+    parsed = urllib.parse.urlparse(url)
+    is_pdf = parsed.path.lower().endswith(".pdf")
+
+    # If it is a PDF or vision extraction requested
+    if is_pdf:
+        import tempfile
+        import urllib.request
+        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp_pdf:
+            tmp_path = tmp_pdf.name
+
+        try:
+            logger.info(f"Downloading PDF from {url} to {tmp_path}")
+            urllib.request.urlretrieve(url, tmp_path)
+
+            episodes_data = None
+            if req.vision_extract:
+                try:
+                    import subprocess
+                    out_ep_path = tmp_path + ".episodes.json"
+                    cv_timeout = max(req.timeout * 3, 1200)
+                    cmd = [
+                        "python3", "extract_computer_vision.py",
+                        "--pdf", tmp_path,
+                        "--vision-model", req.vision_model,
+                        "--output", out_ep_path
+                    ]
+                    logger.info(f"Running CV extraction with timeout {cv_timeout}s: {' '.join(cmd)}")
+                    subprocess.run(cmd, check=True, timeout=cv_timeout)
+                    if os.path.exists(out_ep_path):
+                        with open(out_ep_path, "r", encoding="utf-8") as f:
+                            episodes_data = json.load(f)
+                        os.remove(out_ep_path)
+                except Exception as cve:
+                    logger.error(f"Computer Vision extraction failed: {cve}")
+
+            daemon = get_daemon(use_spacy=req.extract_keywords and req.keywords_method == 'ner')
+            result = daemon.parse_file(tmp_path, file_type="pdf")
+
+            keywords = None
+            if req.extract_keywords and result.get('success'):
+                keywords_data = daemon.extract_keywords(
+                    result.get('text', ''),
+                    method=req.keywords_method,
+                    num_keywords=req.num_keywords
+                )
+                if keywords_data:
+                    keywords = [
+                        KeywordInfo(
+                            keyword=kw['keyword'],
+                            score=kw['score'],
+                            type=kw.get('type'),
+                            reasoning=kw.get('reasoning')
+                        )
+                        for kw in keywords_data
+                    ]
+
+            return FileParseResponse(
+                success=result.get('success', False),
+                text=result.get('text', ''),
+                metadata=result.get('metadata', {'url': url}),
+                pages=result.get('pages', []),
+                tables=result.get('tables', []),
+                keywords=keywords,
+                episodes=episodes_data,
+                file_type="pdf",
+                timestamp=datetime.now(timezone.utc).isoformat()
+            )
+        finally:
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
+    else:
+        # Standard HTML URL parsing
+        try:
+            from agents.parsers import URLParser
+            parser = URLParser(timeout=req.timeout)
+            parse_res = parser.parse(url)
+            res_dict = parse_res.to_dict()
+
+            daemon = get_daemon(use_spacy=req.extract_keywords and req.keywords_method == 'ner')
+            keywords = None
+            if req.extract_keywords and res_dict.get('text'):
+                keywords_data = daemon.extract_keywords(
+                    res_dict.get('text', ''),
+                    method=req.keywords_method,
+                    num_keywords=req.num_keywords
+                )
+                if keywords_data:
+                    keywords = [
+                        KeywordInfo(
+                            keyword=kw['keyword'],
+                            score=kw['score'],
+                            type=kw.get('type'),
+                            reasoning=kw.get('reasoning')
+                        )
+                        for kw in keywords_data
+                    ]
+
+            return FileParseResponse(
+                success=not bool(res_dict.get('error')),
+                text=res_dict.get('text', ''),
+                metadata=res_dict.get('metadata', {'url': url}),
+                pages=res_dict.get('pages', []),
+                tables=[],
+                keywords=keywords,
+                error=res_dict.get('error'),
+                file_type="url",
+                timestamp=datetime.now(timezone.utc).isoformat()
+            )
+        except Exception as e:
+            logger.error(f"Error parsing URL {url}: {e}")
+            raise HTTPException(status_code=500, detail=f"URL parsing failed: {str(e)}")
+
+
+
 # ============================================================================
 # AI Agent Endpoints
 # ============================================================================
@@ -773,10 +899,10 @@ async def extract_entities(request: EntityExtractionRequest):
 
 if __name__ == "__main__":
     uvicorn.run(
-        "api:app",
+        app,
         host="0.0.0.0",
         port=8000,
-        reload=True,
+        reload=False,
         log_level="info"
     )
 

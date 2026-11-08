@@ -32,6 +32,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     curl \
     imagemagick \
+    tesseract-ocr \
+    tesseract-ocr-spa \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy Python packages from builder

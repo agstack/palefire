@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import json
 import base64
@@ -128,6 +129,9 @@ def analyze_image(image_path, session_dir, model="gemma4:latest"):
         # Load the dynamic ODRL constraints/prompts from policy engine
         policy_file = Path("policies/cv_extraction_policy.jsonld")
         current_prompt = load_odrl_policy(policy_file, mode, f"model:{model}", action="extract", constraint_key="prompt")
+        if not current_prompt and model != "gemma4:latest":
+            # Fallback to gemma4:latest policy prompt if specific model not defined in ODRL policy
+            current_prompt = load_odrl_policy(policy_file, mode, "model:gemma4:latest", action="extract", constraint_key="prompt")
         
         if not current_prompt:
             current_prompt = "Classify the contents of this image. Do not include extra text outside of the JSON block."
