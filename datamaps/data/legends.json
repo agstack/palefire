@@ -182,51 +182,51 @@
   "debug_full_page-03_right.png": [
     {
       "color": "Dark Red",
-      "value_range": ">= 3 °C",
+      "value_range": ">= 3 \u00b0C",
       "absolute_range": "N/A",
-      "label": ">= 3 °C"
+      "label": ">= 3 \u00b0C"
     },
     {
       "color": "Red",
-      "value_range": "2 to <3 °C",
+      "value_range": "2 to <3 \u00b0C",
       "absolute_range": "N/A",
-      "label": "2 to <3 °C"
+      "label": "2 to <3 \u00b0C"
     },
     {
       "color": "Orange",
-      "value_range": "1 to <2 °C",
+      "value_range": "1 to <2 \u00b0C",
       "absolute_range": "N/A",
-      "label": "1 to <2 °C"
+      "label": "1 to <2 \u00b0C"
     },
     {
       "color": "Light Yellow",
-      "value_range": "0.5 to <1 °C",
+      "value_range": "0.5 to <1 \u00b0C",
       "absolute_range": "N/A",
-      "label": "0.5 to <1 °C"
+      "label": "0.5 to <1 \u00b0C"
     },
     {
       "color": "Light Blue",
-      "value_range": "-1 to <-0.5 °C",
+      "value_range": "-1 to <-0.5 \u00b0C",
       "absolute_range": "N/A",
-      "label": "-1 to <-0.5 °C"
+      "label": "-1 to <-0.5 \u00b0C"
     },
     {
       "color": "Blue",
-      "value_range": "-2 to <-1 °C",
+      "value_range": "-2 to <-1 \u00b0C",
       "absolute_range": "N/A",
-      "label": "-2 to <-1 °C"
+      "label": "-2 to <-1 \u00b0C"
     },
     {
       "color": "Dark Blue",
-      "value_range": "-3 to <-2 °C",
+      "value_range": "-3 to <-2 \u00b0C",
       "absolute_range": "N/A",
-      "label": "-3 to <-2 °C"
+      "label": "-3 to <-2 \u00b0C"
     },
     {
       "color": "Dark Blue",
-      "value_range": "<= -3 °C",
+      "value_range": "<= -3 \u00b0C",
       "absolute_range": "N/A",
-      "label": "<= -3 °C"
+      "label": "<= -3 \u00b0C"
     }
   ],
   "debug_full_page-04_left.png": [
@@ -270,37 +270,37 @@
   "debug_full_page-04_right.png": [
     {
       "color": "Light Green",
-      "value_range": "<= 0 °C",
+      "value_range": "<= 0 \u00b0C",
       "absolute_range": "N/A",
       "label": "N/A"
     },
     {
       "color": "Light Yellow",
-      "value_range": "0 to 0.5 °C",
+      "value_range": "0 to 0.5 \u00b0C",
       "absolute_range": "0 to 0.5",
       "label": "N/A"
     },
     {
       "color": "Yellow",
-      "value_range": "0.5 to 1 °C",
+      "value_range": "0.5 to 1 \u00b0C",
       "absolute_range": "0.5 to 1",
       "label": "N/A"
     },
     {
       "color": "Orange",
-      "value_range": "1 to 1.5 °C",
+      "value_range": "1 to 1.5 \u00b0C",
       "absolute_range": "1 to 1.5",
       "label": "N/A"
     },
     {
       "color": "Red",
-      "value_range": "1.5 to 2 °C",
+      "value_range": "1.5 to 2 \u00b0C",
       "absolute_range": "1.5 to 2",
       "label": "N/A"
     },
     {
       "color": "Grey",
-      "value_range": ">= 2 °C",
+      "value_range": ">= 2 \u00b0C",
       "absolute_range": "N/A",
       "label": "N/A"
     }
@@ -353,119 +353,149 @@
     {
       "color": "Grey",
       "value_range": "N/A",
-      "absolute_range": "> 2 °C",
+      "absolute_range": "> 2 \u00b0C",
       "label": "N/A"
     },
     {
       "color": "Red",
       "value_range": "N/A",
-      "absolute_range": "1.5 to 2 °C",
+      "absolute_range": "1.5 to 2 \u00b0C",
       "label": "N/A"
     },
     {
       "color": "Dark Orange",
       "value_range": "N/A",
-      "absolute_range": "1 to 1.5 °C",
+      "absolute_range": "1 to 1.5 \u00b0C",
       "label": "N/A"
     },
     {
       "color": "Orange",
       "value_range": "N/A",
-      "absolute_range": "0.5 to 1 °C",
+      "absolute_range": "0.5 to 1 \u00b0C",
       "label": "N/A"
     },
     {
       "color": "Light Yellow",
       "value_range": "N/A",
-      "absolute_range": "0 to 0.5 °C",
+      "absolute_range": "0 to 0.5 \u00b0C",
       "label": "N/A"
     },
     {
       "color": "Light Green",
       "value_range": "N/A",
-      "absolute_range": "< 0 °C",
+      "absolute_range": "< 0 \u00b0C",
       "label": "N/A"
     }
   ],
   "debug_full_page-06_left.png": [
     {
-      "color": "Green",
-      "value_range": ">= 40%",
-      "absolute_range": "N/A",
+      "color": "Dark Orange",
+      "value_range": "N/A",
+      "absolute_range": "<-200 mm",
       "label": "N/A"
     },
     {
-      "color": "Light Green",
-      "value_range": "20% to 40%",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Yellow",
-      "value_range": "0% to 20%",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Yellow",
-      "value_range": "-20% to 0%",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Orange",
-      "value_range": "-40% to -20%",
-      "absolute_range": "N/A",
+      "color": "Dark Orange",
+      "value_range": "N/A",
+      "absolute_range": "-200 to -100 mm",
       "label": "N/A"
     },
     {
       "color": "Orange",
-      "value_range": "-60% to -40%",
-      "absolute_range": "N/A",
+      "value_range": "N/A",
+      "absolute_range": "-100 to -50 mm",
       "label": "N/A"
     },
     {
-      "color": "Red",
-      "value_range": "-80% to -60%",
+      "color": "Light Orange",
+      "value_range": "N/A",
+      "absolute_range": "-50 to 0 mm",
+      "label": "N/A"
+    },
+    {
+      "color": "White",
+      "value_range": "N/A",
       "absolute_range": "N/A",
+      "label": "No Signal"
+    },
+    {
+      "color": "Light Green",
+      "value_range": "N/A",
+      "absolute_range": "0 to 50 mm",
+      "label": "N/A"
+    },
+    {
+      "color": "Green",
+      "value_range": "N/A",
+      "absolute_range": "50 to 100 mm",
+      "label": "N/A"
+    },
+    {
+      "color": "Dark Green",
+      "value_range": "N/A",
+      "absolute_range": "100 to 200 mm",
+      "label": "N/A"
+    },
+    {
+      "color": "Dark Green",
+      "value_range": "N/A",
+      "absolute_range": "> 200 mm",
       "label": "N/A"
     }
   ],
   "debug_full_page-06_right.png": [
     {
-      "color": "Green",
-      "value_range": "<= 0 °C",
-      "absolute_range": "<= 0 °C",
+      "color": "Dark Blue",
+      "value_range": "<-2.0\u00b0C",
+      "absolute_range": "N/A",
       "label": "N/A"
     },
     {
+      "color": "Blue",
+      "value_range": "-2.0..-1.0\u00b0C",
+      "absolute_range": "N/A",
+      "label": "N/A"
+    },
+    {
+      "color": "Light Blue",
+      "value_range": "-1.0..-0.5\u00b0C",
+      "absolute_range": "N/A",
+      "label": "N/A"
+    },
+    {
+      "color": "Light Green",
+      "value_range": "-0.5..0\u00b0C",
+      "absolute_range": "N/A",
+      "label": "N/A"
+    },
+    {
+      "color": "White",
+      "value_range": "N/A",
+      "absolute_range": "N/A",
+      "label": "No Signal"
+    },
+    {
       "color": "Yellow",
-      "value_range": "0 to 0.5 °C",
-      "absolute_range": "0 to 0.5 °C",
+      "value_range": "0..0.5\u00b0C",
+      "absolute_range": "N/A",
       "label": "N/A"
     },
     {
       "color": "Light Orange",
-      "value_range": "0.5 to 1 °C",
-      "absolute_range": "0.5 to 1 °C",
+      "value_range": "0.5..1.0\u00b0C",
+      "absolute_range": "N/A",
       "label": "N/A"
     },
     {
       "color": "Orange",
-      "value_range": "1 to 1.5 °C",
-      "absolute_range": "1 to 1.5 °C",
+      "value_range": "1.0..2.0\u00b0C",
+      "absolute_range": "N/A",
       "label": "N/A"
     },
     {
-      "color": "Red",
-      "value_range": "1.5 to 2 °C",
-      "absolute_range": "1.5 to 2 °C",
-      "label": "N/A"
-    },
-    {
-      "color": "Grey",
-      "value_range": ">= 2 °C",
-      "absolute_range": ">= 2 °C",
+      "color": "Dark Red",
+      "value_range": "> 2.0\u00b0C",
+      "absolute_range": "N/A",
       "label": "N/A"
     }
   ],
@@ -528,37 +558,37 @@
   "debug_full_page-07_right.png": [
     {
       "color": "Grey",
-      "value_range": "> 2 °C",
+      "value_range": "> 2 \u00b0C",
       "absolute_range": "2",
       "label": "N/A"
     },
     {
       "color": "Red",
-      "value_range": "1.5 to 2 °C",
+      "value_range": "1.5 to 2 \u00b0C",
       "absolute_range": "1.5 to 2",
       "label": "N/A"
     },
     {
       "color": "Dark Orange",
-      "value_range": "1 to 1.5 °C",
+      "value_range": "1 to 1.5 \u00b0C",
       "absolute_range": "1 to 1.5",
       "label": "N/A"
     },
     {
       "color": "Orange",
-      "value_range": "0.5 to 1 °C",
+      "value_range": "0.5 to 1 \u00b0C",
       "absolute_range": "0.5 to 1",
       "label": "N/A"
     },
     {
       "color": "Light Yellow",
-      "value_range": "0 to 0.5 °C",
+      "value_range": "0 to 0.5 \u00b0C",
       "absolute_range": "0 to 0.5",
       "label": "N/A"
     },
     {
       "color": "Light Green",
-      "value_range": "< 0 °C",
+      "value_range": "< 0 \u00b0C",
       "absolute_range": "0",
       "label": "N/A"
     }
@@ -616,574 +646,362 @@
   "debug_full_page-08_right.png": [
     {
       "color": "Grey",
-      "value_range": ">= 2.5 °C",
+      "value_range": ">= 2.5 \u00b0C",
       "absolute_range": "2.5",
       "label": "N/A"
     },
     {
       "color": "Red",
-      "value_range": "2 to <2.5 °C",
+      "value_range": "2 to <2.5 \u00b0C",
       "absolute_range": "2",
       "label": "N/A"
     },
     {
       "color": "Dark Orange",
-      "value_range": "1.5 to <2 °C",
+      "value_range": "1.5 to <2 \u00b0C",
       "absolute_range": "1.5",
       "label": "N/A"
     },
     {
       "color": "Orange",
-      "value_range": "1 to <1.5 °C",
+      "value_range": "1 to <1.5 \u00b0C",
       "absolute_range": "1",
       "label": "N/A"
     },
     {
       "color": "Light Orange",
-      "value_range": "0.5 to <1 °C",
+      "value_range": "0.5 to <1 \u00b0C",
       "absolute_range": "0.5",
       "label": "N/A"
     },
     {
       "color": "Light Green",
-      "value_range": "0 to <0.5 °C",
+      "value_range": "0 to <0.5 \u00b0C",
       "absolute_range": "0",
       "label": "N/A"
     },
     {
       "color": "Green",
-      "value_range": "< 0 °C",
+      "value_range": "< 0 \u00b0C",
       "absolute_range": "0",
       "label": "N/A"
     }
   ],
   "debug_full_page-09_left.png": [
     {
-      "color": "Dark Orange",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
-      "absolute_range": "<-200 mm",
-      "label": "N/A"
+      "absolute_range": "0.1 - 1 mm",
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Dark Orange",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
-      "absolute_range": "-200 to -100 mm",
-      "label": "N/A"
+      "absolute_range": "1.1 - 5 mm",
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Orange",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
-      "absolute_range": "-100 to -50 mm",
-      "label": "N/A"
+      "absolute_range": "5.1 - 10 mm",
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Orange",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
-      "absolute_range": "-50 to 0 mm",
-      "label": "N/A"
+      "absolute_range": "10.1 - 15 mm",
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "White",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
-      "absolute_range": "N/A",
-      "label": "No Signal"
+      "absolute_range": "15.1 - 25 mm",
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
-      "absolute_range": "0 to 50 mm",
-      "label": "N/A"
+      "absolute_range": "25.1 - 50 mm",
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
-      "absolute_range": "50 to 100 mm",
-      "label": "N/A"
+      "absolute_range": "50.1 - 75 mm",
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
-      "absolute_range": "100 to 200 mm",
-      "label": "N/A"
+      "absolute_range": "75.1 - 100 mm",
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
-      "absolute_range": "> 200 mm",
-      "label": "N/A"
+      "absolute_range": "100.1 - 125 mm",
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
+    },
+    {
+      "color": "Palette Step 10 (#73A99C)",
+      "value_range": "N/A",
+      "absolute_range": "125.1 - 150 mm",
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
+    },
+    {
+      "color": "Palette Step 11 (#9CCBD0)",
+      "value_range": "N/A",
+      "absolute_range": "150.1 - 200 mm",
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
+    },
+    {
+      "color": "Palette Step 12 (#D4EEFD)",
+      "value_range": "N/A",
+      "absolute_range": "200.1 - 250 mm",
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
+    },
+    {
+      "color": "Palette Step 13 (#B0DDF9)",
+      "value_range": "N/A",
+      "absolute_range": "250.1 - 275 mm",
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
+    },
+    {
+      "color": "Palette Step 14 (#8ED4F7)",
+      "value_range": "N/A",
+      "absolute_range": "275.1 - 300 mm",
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
+    },
+    {
+      "color": "Palette Step 15 (#6BA8F0)",
+      "value_range": "N/A",
+      "absolute_range": "300.1 - 350 mm",
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
+    },
+    {
+      "color": "Palette Step 16 (#6488E2)",
+      "value_range": "N/A",
+      "absolute_range": "350.1 - 400 mm",
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
+    },
+    {
+      "color": "Palette Step 17 (#5C75C9)",
+      "value_range": "N/A",
+      "absolute_range": "400.1 - 450 mm",
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
+    },
+    {
+      "color": "Palette Step 18 (#576AA4)",
+      "value_range": "N/A",
+      "absolute_range": "450.1 - 500 mm",
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
+    },
+    {
+      "color": "Palette Step 19 (#505F8F)",
+      "value_range": "N/A",
+      "absolute_range": "500.1 - 550 mm",
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
+    },
+    {
+      "color": "Palette Step 20 (#534A88)",
+      "value_range": "N/A",
+      "absolute_range": "550.1 - 600 mm",
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
+    },
+    {
+      "color": "Palette Step 21 (#654E84)",
+      "value_range": "N/A",
+      "absolute_range": "600.1 - 650 mm",
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
+    },
+    {
+      "color": "Palette Step 22 (#844E93)",
+      "value_range": "N/A",
+      "absolute_range": "650.1 - 700 mm",
+      "label": "N/A",
+      "bgr": [
+        147,
+        78,
+        132
+      ],
+      "hex": "#844E93",
+      "palette_step": "Palette Step 22"
+    },
+    {
+      "color": "Palette Step 23 (#A657AC)",
+      "value_range": "N/A",
+      "absolute_range": "700.1 - 750 mm",
+      "label": "N/A",
+      "bgr": [
+        172,
+        87,
+        166
+      ],
+      "hex": "#A657AC",
+      "palette_step": "Palette Step 23"
+    },
+    {
+      "color": "Palette Step 24 (#BA5AAF)",
+      "value_range": "N/A",
+      "absolute_range": "750.1 - 800 mm",
+      "label": "N/A",
+      "bgr": [
+        175,
+        90,
+        186
+      ],
+      "hex": "#BA5AAF",
+      "palette_step": "Palette Step 24"
     }
   ],
   "debug_full_page-09_right.png": [
-    {
-      "color": "Dark Blue",
-      "value_range": "<-2.0°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Blue",
-      "value_range": "-2.0..-1.0°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "-1.0..-0.5°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Green",
-      "value_range": "-0.5..0°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "White",
-      "value_range": "N/A",
-      "absolute_range": "N/A",
-      "label": "No Signal"
-    },
-    {
-      "color": "Yellow",
-      "value_range": "0..0.5°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Orange",
-      "value_range": "0.5..1.0°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Orange",
-      "value_range": "1.0..2.0°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "> 2.0°C",
-      "absolute_range": "N/A",
-      "label": "N/A"
-    }
-  ],
-  "debug_full_page-10_left.png": [
-    {
-      "color": "White",
-      "value_range": "N/A",
-      "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Yellow",
-      "value_range": "N/A",
-      "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Green",
-      "value_range": "N/A",
-      "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Green",
-      "value_range": "N/A",
-      "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Green",
-      "value_range": "N/A",
-      "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Green",
-      "value_range": "N/A",
-      "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Green",
-      "value_range": "N/A",
-      "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Green",
-      "value_range": "N/A",
-      "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Blue",
-      "value_range": "N/A",
-      "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "400.1 - 450 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "450.1 - 500 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "500.1 - 550 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "550.1 - 600 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "600.1 - 650 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "650.1 - 700 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "700.1 - 750 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "White",
-      "value_range": "N/A",
-      "absolute_range": "750.1 - 800 mm",
-      "label": "N/A"
-    }
-  ],
-  "debug_full_page-10_right.png": [
-    {
-      "color": "White",
-      "value_range": "N/A",
-      "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Grey",
-      "value_range": "N/A",
-      "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Green",
-      "value_range": "N/A",
-      "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Green",
-      "value_range": "N/A",
-      "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Green",
-      "value_range": "N/A",
-      "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Green",
-      "value_range": "N/A",
-      "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Blue",
-      "value_range": "N/A",
-      "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Blue",
-      "value_range": "N/A",
-      "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "400.1 - 450 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "450.1 - 500 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "500.1 - 550 mm",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "550.1 - 600 mm",
-      "label": "N/A"
-    }
-  ],
-  "debug_full_page-11_left.png": [
-    {
-      "color": "White",
-      "value_range": "N/A",
-      "absolute_range": "0.1 - 1",
-      "label": "N/A"
-    },
-    {
-      "color": "Grey",
-      "value_range": "N/A",
-      "absolute_range": "1.1 - 5",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "5.1 - 10",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "10.1 - 15",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Green",
-      "value_range": "N/A",
-      "absolute_range": "15.1 - 25",
-      "label": "N/A"
-    },
-    {
-      "color": "Green",
-      "value_range": "N/A",
-      "absolute_range": "25.1 - 50",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Green",
-      "value_range": "N/A",
-      "absolute_range": "50.1 - 75",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Green",
-      "value_range": "N/A",
-      "absolute_range": "75.1 - 100",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "100.1 - 125",
-      "label": "N/A"
-    },
-    {
-      "color": "Light Blue",
-      "value_range": "N/A",
-      "absolute_range": "125.1 - 150",
-      "label": "N/A"
-    },
-    {
-      "color": "Blue",
-      "value_range": "N/A",
-      "absolute_range": "150.1 - 200",
-      "label": "N/A"
-    },
-    {
-      "color": "Blue",
-      "value_range": "N/A",
-      "absolute_range": "200.1 - 250",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "250.1 - 275",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "275.1 - 300",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "300.1 - 350",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Blue",
-      "value_range": "N/A",
-      "absolute_range": "350.1 - 400",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "400.1 - 450",
-      "label": "N/A"
-    },
-    {
-      "color": "Red",
-      "value_range": "N/A",
-      "absolute_range": "450.1 - 500",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "500.1 - 550",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "550.1 - 600",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "600.1 - 650",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "650.1 - 700",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "700.1 - 750",
-      "label": "N/A"
-    },
-    {
-      "color": "Dark Red",
-      "value_range": "N/A",
-      "absolute_range": "750.1 - 800",
-      "label": "N/A"
-    }
-  ],
-  "debug_full_page-11_right.png": [
     {
       "color": "Dark Orange",
       "value_range": "<= -60%",
@@ -1221,304 +1039,1335 @@
       "label": ">= 40%"
     }
   ],
-  "debug_full_page-12_left.png": [
+  "debug_full_page-10_left.png": [
     {
-      "color": "White",
-      "value_range": "0.1 - 1",
+      "color": "Palette Step 1 (#837770)",
+      "value_range": "N/A",
       "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
-      "value_range": "1.1 - 5",
+      "color": "Palette Step 2 (#B1998D)",
+      "value_range": "N/A",
       "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
-      "value_range": "5.1 - 10",
+      "color": "Palette Step 3 (#CEC29E)",
+      "value_range": "N/A",
       "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
+    },
+    {
+      "color": "Palette Step 4 (#F3F5CA)",
+      "value_range": "N/A",
+      "absolute_range": "10.1 - 15 mm",
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
+    },
+    {
+      "color": "Palette Step 5 (#DEF9B1)",
+      "value_range": "N/A",
+      "absolute_range": "15.1 - 25 mm",
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
+    },
+    {
+      "color": "Palette Step 6 (#B5F288)",
+      "value_range": "N/A",
+      "absolute_range": "25.1 - 50 mm",
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
+    },
+    {
+      "color": "Palette Step 7 (#97E067)",
+      "value_range": "N/A",
+      "absolute_range": "50.1 - 75 mm",
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
+    },
+    {
+      "color": "Palette Step 8 (#84BF74)",
+      "value_range": "N/A",
+      "absolute_range": "75.1 - 100 mm",
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
+    },
+    {
+      "color": "Palette Step 9 (#6DA077)",
+      "value_range": "N/A",
+      "absolute_range": "100.1 - 125 mm",
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
+    },
+    {
+      "color": "Palette Step 10 (#73A99C)",
+      "value_range": "N/A",
+      "absolute_range": "125.1 - 150 mm",
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
+    },
+    {
+      "color": "Palette Step 11 (#9CCBD0)",
+      "value_range": "N/A",
+      "absolute_range": "150.1 - 200 mm",
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
+    },
+    {
+      "color": "Palette Step 12 (#D4EEFD)",
+      "value_range": "N/A",
+      "absolute_range": "200.1 - 250 mm",
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
+    },
+    {
+      "color": "Palette Step 13 (#B0DDF9)",
+      "value_range": "N/A",
+      "absolute_range": "250.1 - 275 mm",
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
+    },
+    {
+      "color": "Palette Step 14 (#8ED4F7)",
+      "value_range": "N/A",
+      "absolute_range": "275.1 - 300 mm",
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
+    },
+    {
+      "color": "Palette Step 15 (#6BA8F0)",
+      "value_range": "N/A",
+      "absolute_range": "300.1 - 350 mm",
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
+    },
+    {
+      "color": "Palette Step 16 (#6488E2)",
+      "value_range": "N/A",
+      "absolute_range": "350.1 - 400 mm",
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
+    },
+    {
+      "color": "Palette Step 17 (#5C75C9)",
+      "value_range": "N/A",
+      "absolute_range": "400.1 - 450 mm",
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
+    },
+    {
+      "color": "Palette Step 18 (#576AA4)",
+      "value_range": "N/A",
+      "absolute_range": "450.1 - 500 mm",
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
+    },
+    {
+      "color": "Palette Step 19 (#505F8F)",
+      "value_range": "N/A",
+      "absolute_range": "500.1 - 550 mm",
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
+    },
+    {
+      "color": "Palette Step 20 (#534A88)",
+      "value_range": "N/A",
+      "absolute_range": "550.1 - 600 mm",
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
+    },
+    {
+      "color": "Palette Step 21 (#654E84)",
+      "value_range": "N/A",
+      "absolute_range": "600.1 - 650 mm",
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
+    },
+    {
+      "color": "Palette Step 22 (#844E93)",
+      "value_range": "N/A",
+      "absolute_range": "650.1 - 700 mm",
+      "label": "N/A",
+      "bgr": [
+        147,
+        78,
+        132
+      ],
+      "hex": "#844E93",
+      "palette_step": "Palette Step 22"
+    },
+    {
+      "color": "Palette Step 23 (#A657AC)",
+      "value_range": "N/A",
+      "absolute_range": "700.1 - 750 mm",
+      "label": "N/A",
+      "bgr": [
+        172,
+        87,
+        166
+      ],
+      "hex": "#A657AC",
+      "palette_step": "Palette Step 23"
+    },
+    {
+      "color": "Palette Step 24 (#BA5AAF)",
+      "value_range": "N/A",
+      "absolute_range": "750.1 - 800 mm",
+      "label": "N/A",
+      "bgr": [
+        175,
+        90,
+        186
+      ],
+      "hex": "#BA5AAF",
+      "palette_step": "Palette Step 24"
+    }
+  ],
+  "debug_full_page-10_right.png": [
+    {
+      "color": "Palette Step 1 (#837770)",
+      "value_range": "N/A",
+      "absolute_range": "0.1 - 1 mm",
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
+    },
+    {
+      "color": "Palette Step 2 (#B1998D)",
+      "value_range": "N/A",
+      "absolute_range": "1.1 - 5 mm",
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
+    },
+    {
+      "color": "Palette Step 3 (#CEC29E)",
+      "value_range": "N/A",
+      "absolute_range": "5.1 - 10 mm",
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
+    },
+    {
+      "color": "Palette Step 4 (#F3F5CA)",
+      "value_range": "N/A",
+      "absolute_range": "10.1 - 15 mm",
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
+    },
+    {
+      "color": "Palette Step 5 (#DEF9B1)",
+      "value_range": "N/A",
+      "absolute_range": "15.1 - 25 mm",
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
+    },
+    {
+      "color": "Palette Step 6 (#B5F288)",
+      "value_range": "N/A",
+      "absolute_range": "25.1 - 50 mm",
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
+    },
+    {
+      "color": "Palette Step 7 (#97E067)",
+      "value_range": "N/A",
+      "absolute_range": "50.1 - 75 mm",
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
+    },
+    {
+      "color": "Palette Step 8 (#84BF74)",
+      "value_range": "N/A",
+      "absolute_range": "75.1 - 100 mm",
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
+    },
+    {
+      "color": "Palette Step 9 (#6DA077)",
+      "value_range": "N/A",
+      "absolute_range": "100.1 - 125 mm",
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
+    },
+    {
+      "color": "Palette Step 10 (#73A99C)",
+      "value_range": "N/A",
+      "absolute_range": "125.1 - 150 mm",
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
+    },
+    {
+      "color": "Palette Step 11 (#9CCBD0)",
+      "value_range": "N/A",
+      "absolute_range": "150.1 - 200 mm",
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
+    },
+    {
+      "color": "Palette Step 12 (#D4EEFD)",
+      "value_range": "N/A",
+      "absolute_range": "200.1 - 250 mm",
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
+    },
+    {
+      "color": "Palette Step 13 (#B0DDF9)",
+      "value_range": "N/A",
+      "absolute_range": "250.1 - 275 mm",
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
+    },
+    {
+      "color": "Palette Step 14 (#8ED4F7)",
+      "value_range": "N/A",
+      "absolute_range": "275.1 - 300 mm",
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
+    },
+    {
+      "color": "Palette Step 15 (#6BA8F0)",
+      "value_range": "N/A",
+      "absolute_range": "300.1 - 350 mm",
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
+    },
+    {
+      "color": "Palette Step 16 (#6488E2)",
+      "value_range": "N/A",
+      "absolute_range": "350.1 - 400 mm",
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
+    },
+    {
+      "color": "Palette Step 17 (#5C75C9)",
+      "value_range": "N/A",
+      "absolute_range": "400.1 - 450 mm",
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
+    },
+    {
+      "color": "Palette Step 18 (#576AA4)",
+      "value_range": "N/A",
+      "absolute_range": "450.1 - 500 mm",
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
+    },
+    {
+      "color": "Palette Step 19 (#505F8F)",
+      "value_range": "N/A",
+      "absolute_range": "500.1 - 550 mm",
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
+    },
+    {
+      "color": "Palette Step 20 (#534A88)",
+      "value_range": "N/A",
+      "absolute_range": "550.1 - 600 mm",
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
+    }
+  ],
+  "debug_full_page-11_left.png": [
+    {
+      "color": "Dark Red",
+      "value_range": "< -75%",
+      "absolute_range": "N/A",
+      "label": "< -75%"
+    },
+    {
+      "color": "Red",
+      "value_range": "< -50%",
+      "absolute_range": "N/A",
+      "label": "< -50%"
+    },
+    {
+      "color": "Orange",
+      "value_range": "< -25%",
+      "absolute_range": "N/A",
+      "label": "< -25%"
+    },
+    {
+      "color": "Yellow",
+      "value_range": "< -10%",
+      "absolute_range": "N/A",
+      "label": "< -10%"
     },
     {
       "color": "Grey",
-      "value_range": "10.1 - 15",
-      "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
+      "value_range": "normal",
+      "absolute_range": "N/A",
+      "label": "normal"
     },
     {
       "color": "Light Green",
-      "value_range": "15.1 - 25",
-      "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
+      "value_range": "> 10%",
+      "absolute_range": "N/A",
+      "label": "> 10%"
     },
     {
       "color": "Green",
+      "value_range": "> 25%",
+      "absolute_range": "N/A",
+      "label": "> 25%"
+    },
+    {
+      "color": "Dark Green",
+      "value_range": "> 50%",
+      "absolute_range": "N/A",
+      "label": "> 50%"
+    },
+    {
+      "color": "Dark Blue",
+      "value_range": "> 75%",
+      "absolute_range": "N/A",
+      "label": "> 75%"
+    }
+  ],
+  "debug_full_page-11_right.png": [
+    {
+      "color": "Dark Red",
+      "value_range": "< -75%",
+      "absolute_range": "N/A",
+      "label": "< -75%"
+    },
+    {
+      "color": "Red",
+      "value_range": "< -50%",
+      "absolute_range": "N/A",
+      "label": "< -50%"
+    },
+    {
+      "color": "Orange",
+      "value_range": "< -25%",
+      "absolute_range": "N/A",
+      "label": "< -25%"
+    },
+    {
+      "color": "Yellow",
+      "value_range": "< -10%",
+      "absolute_range": "N/A",
+      "label": "< -10%"
+    },
+    {
+      "color": "Grey",
+      "value_range": "normal",
+      "absolute_range": "N/A",
+      "label": "normal"
+    },
+    {
+      "color": "Light Green",
+      "value_range": "> 10%",
+      "absolute_range": "N/A",
+      "label": "> 10%"
+    },
+    {
+      "color": "Green",
+      "value_range": "> 25%",
+      "absolute_range": "N/A",
+      "label": "> 25%"
+    },
+    {
+      "color": "Dark Green",
+      "value_range": "> 50%",
+      "absolute_range": "N/A",
+      "label": "> 50%"
+    },
+    {
+      "color": "Dark Blue",
+      "value_range": "> 75%",
+      "absolute_range": "N/A",
+      "label": "> 75%"
+    }
+  ],
+  "debug_full_page-12_left.png": [
+    {
+      "color": "Palette Step 1 (#837770)",
+      "value_range": "0.1 - 1",
+      "absolute_range": "0.1 - 1 mm",
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
+    },
+    {
+      "color": "Palette Step 2 (#B1998D)",
+      "value_range": "1.1 - 5",
+      "absolute_range": "1.1 - 5 mm",
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
+    },
+    {
+      "color": "Palette Step 3 (#CEC29E)",
+      "value_range": "5.1 - 10",
+      "absolute_range": "5.1 - 10 mm",
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
+    },
+    {
+      "color": "Palette Step 4 (#F3F5CA)",
+      "value_range": "10.1 - 15",
+      "absolute_range": "10.1 - 15 mm",
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
+    },
+    {
+      "color": "Palette Step 5 (#DEF9B1)",
+      "value_range": "15.1 - 25",
+      "absolute_range": "15.1 - 25 mm",
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
+    },
+    {
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "25.1 - 50",
       "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "50.1 - 75",
       "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "75.1 - 100",
       "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "100.1 - 125",
       "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "125.1 - 150",
       "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "150.1 - 200",
       "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "200.1 - 250",
       "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "250.1 - 275",
       "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "275.1 - 300",
       "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "300.1 - 350",
       "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "350.1 - 400",
       "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     }
   ],
   "debug_full_page-12_right.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     }
   ],
   "debug_full_page-13_left.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "0.1 - 1 mm",
       "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "1.1 - 5 mm",
       "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "5.1 - 10 mm",
       "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "10.1 - 15 mm",
       "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "15.1 - 25 mm",
       "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "25.1 - 50 mm",
       "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "50.1 - 75 mm",
       "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "75.1 - 100 mm",
       "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "100.1 - 125 mm",
       "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "125.1 - 150 mm",
       "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "150.1 - 200 mm",
       "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "200.1 - 250 mm",
       "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "250.1 - 275 mm",
       "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "275.1 - 300 mm",
       "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "300.1 - 350 mm",
       "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "350.1 - 400 mm",
       "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     }
   ],
   "debug_full_page-13_right.png": [
@@ -1549,392 +2398,840 @@
   ],
   "debug_full_page-14_left.png": [
     {
-      "color": "Grey",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "N/A",
       "absolute_range": "500.1 - 550 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "N/A",
       "absolute_range": "550.1 - 600 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     }
   ],
   "debug_full_page-14_right.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "N/A",
       "absolute_range": "500.1 - 550",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "N/A",
       "absolute_range": "550.1 - 600",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 21 (#654E84)",
       "value_range": "N/A",
       "absolute_range": "600.1 - 650",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 22 (#844E93)",
       "value_range": "N/A",
       "absolute_range": "650.1 - 700",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        147,
+        78,
+        132
+      ],
+      "hex": "#844E93",
+      "palette_step": "Palette Step 22"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 23 (#A657AC)",
       "value_range": "N/A",
       "absolute_range": "700.1 - 750",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        172,
+        87,
+        166
+      ],
+      "hex": "#A657AC",
+      "palette_step": "Palette Step 23"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 24 (#BA5AAF)",
       "value_range": "N/A",
       "absolute_range": "750.1 - 800",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        175,
+        90,
+        186
+      ],
+      "hex": "#BA5AAF",
+      "palette_step": "Palette Step 24"
     }
   ],
   "debug_full_page-15_left.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "N/A",
       "absolute_range": "500.1 - 550 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "N/A",
       "absolute_range": "550.1 - 600 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     }
   ],
   "debug_full_page-15_right.png": [
@@ -1959,356 +3256,762 @@
   ],
   "debug_full_page-16_left.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     }
   ],
   "debug_full_page-16_right.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "N/A",
       "absolute_range": "500.1 - 550",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "N/A",
       "absolute_range": "550.1 - 600",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 21 (#654E84)",
       "value_range": "N/A",
       "absolute_range": "600.1 - 650",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 22 (#844E93)",
       "value_range": "N/A",
       "absolute_range": "650.1 - 700",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        147,
+        78,
+        132
+      ],
+      "hex": "#844E93",
+      "palette_step": "Palette Step 22"
     }
   ],
   "debug_full_page-17_left.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     }
   ],
   "debug_full_page-17_right.png": [
@@ -2339,398 +4042,853 @@
   ],
   "debug_full_page-18_left.png": [
     {
-      "color": "Grey",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "N/A",
       "absolute_range": "500.1 - 550",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "N/A",
       "absolute_range": "550.1 - 600",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 21 (#654E84)",
       "value_range": "N/A",
       "absolute_range": "600.1 - 650",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
     }
   ],
   "debug_full_page-18_right.png": [
     {
-      "color": "Grey",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "0.1 - 1 mm",
       "absolute_range": "0.1 - 1 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "White",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "1.1 - 5 mm",
       "absolute_range": "1.1 - 5 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "5.1 - 10 mm",
       "absolute_range": "5.1 - 10 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "10.1 - 15 mm",
       "absolute_range": "10.1 - 15 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "15.1 - 25 mm",
       "absolute_range": "15.1 - 25 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Light Yellow",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "25.1 - 50 mm",
       "absolute_range": "25.1 - 50 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Yellow",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "50.1 - 75 mm",
       "absolute_range": "50.1 - 75 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Light Orange",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "75.1 - 100 mm",
       "absolute_range": "75.1 - 100 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Orange",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "100.1 - 125 mm",
       "absolute_range": "100.1 - 125 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Dark Orange",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "125.1 - 150 mm",
       "absolute_range": "125.1 - 150 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Red",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "150.1 - 200 mm",
       "absolute_range": "150.1 - 200 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Dark Red",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "200.1 - 250 mm",
       "absolute_range": "200.1 - 250 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "250.1 - 275 mm",
       "absolute_range": "250.1 - 275 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "275.1 - 300 mm",
       "absolute_range": "275.1 - 300 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "300.1 - 350 mm",
       "absolute_range": "300.1 - 350 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "350.1 - 400 mm",
       "absolute_range": "350.1 - 400 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "400.1 - 450 mm",
       "absolute_range": "400.1 - 450 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "450.1 - 500 mm",
       "absolute_range": "450.1 - 500 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "500.1 - 550 mm",
       "absolute_range": "500.1 - 550 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "550.1 - 600 mm",
       "absolute_range": "550.1 - 600 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 21 (#654E84)",
       "value_range": "600.1 - 650 mm",
       "absolute_range": "600.1 - 650 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 22 (#844E93)",
       "value_range": "650.1 - 700 mm",
       "absolute_range": "650.1 - 700 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        147,
+        78,
+        132
+      ],
+      "hex": "#844E93",
+      "palette_step": "Palette Step 22"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 23 (#A657AC)",
       "value_range": "700.1 - 750 mm",
       "absolute_range": "700.1 - 750 mm",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        172,
+        87,
+        166
+      ],
+      "hex": "#A657AC",
+      "palette_step": "Palette Step 23"
     }
   ],
   "debug_full_page-19_left.png": [
     {
-      "color": "White",
+      "color": "Palette Step 1 (#837770)",
       "value_range": "N/A",
       "absolute_range": "0.1 - 1",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        112,
+        119,
+        131
+      ],
+      "hex": "#837770",
+      "palette_step": "Palette Step 1"
     },
     {
-      "color": "Grey",
+      "color": "Palette Step 2 (#B1998D)",
       "value_range": "N/A",
       "absolute_range": "1.1 - 5",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        141,
+        153,
+        177
+      ],
+      "hex": "#B1998D",
+      "palette_step": "Palette Step 2"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 3 (#CEC29E)",
       "value_range": "N/A",
       "absolute_range": "5.1 - 10",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        158,
+        194,
+        206
+      ],
+      "hex": "#CEC29E",
+      "palette_step": "Palette Step 3"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 4 (#F3F5CA)",
       "value_range": "N/A",
       "absolute_range": "10.1 - 15",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        202,
+        245,
+        243
+      ],
+      "hex": "#F3F5CA",
+      "palette_step": "Palette Step 4"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 5 (#DEF9B1)",
       "value_range": "N/A",
       "absolute_range": "15.1 - 25",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        177,
+        249,
+        222
+      ],
+      "hex": "#DEF9B1",
+      "palette_step": "Palette Step 5"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 6 (#B5F288)",
       "value_range": "N/A",
       "absolute_range": "25.1 - 50",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        242,
+        181
+      ],
+      "hex": "#B5F288",
+      "palette_step": "Palette Step 6"
     },
     {
-      "color": "Light Green",
+      "color": "Palette Step 7 (#97E067)",
       "value_range": "N/A",
       "absolute_range": "50.1 - 75",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        103,
+        224,
+        151
+      ],
+      "hex": "#97E067",
+      "palette_step": "Palette Step 7"
     },
     {
-      "color": "Green",
+      "color": "Palette Step 8 (#84BF74)",
       "value_range": "N/A",
       "absolute_range": "75.1 - 100",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        116,
+        191,
+        132
+      ],
+      "hex": "#84BF74",
+      "palette_step": "Palette Step 8"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 9 (#6DA077)",
       "value_range": "N/A",
       "absolute_range": "100.1 - 125",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        119,
+        160,
+        109
+      ],
+      "hex": "#6DA077",
+      "palette_step": "Palette Step 9"
     },
     {
-      "color": "Dark Green",
+      "color": "Palette Step 10 (#73A99C)",
       "value_range": "N/A",
       "absolute_range": "125.1 - 150",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        156,
+        169,
+        115
+      ],
+      "hex": "#73A99C",
+      "palette_step": "Palette Step 10"
     },
     {
-      "color": "Light Blue",
+      "color": "Palette Step 11 (#9CCBD0)",
       "value_range": "N/A",
       "absolute_range": "150.1 - 200",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        208,
+        203,
+        156
+      ],
+      "hex": "#9CCBD0",
+      "palette_step": "Palette Step 11"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 12 (#D4EEFD)",
       "value_range": "N/A",
       "absolute_range": "200.1 - 250",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        253,
+        238,
+        212
+      ],
+      "hex": "#D4EEFD",
+      "palette_step": "Palette Step 12"
     },
     {
-      "color": "Blue",
+      "color": "Palette Step 13 (#B0DDF9)",
       "value_range": "N/A",
       "absolute_range": "250.1 - 275",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        249,
+        221,
+        176
+      ],
+      "hex": "#B0DDF9",
+      "palette_step": "Palette Step 13"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 14 (#8ED4F7)",
       "value_range": "N/A",
       "absolute_range": "275.1 - 300",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        247,
+        212,
+        142
+      ],
+      "hex": "#8ED4F7",
+      "palette_step": "Palette Step 14"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 15 (#6BA8F0)",
       "value_range": "N/A",
       "absolute_range": "300.1 - 350",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        240,
+        168,
+        107
+      ],
+      "hex": "#6BA8F0",
+      "palette_step": "Palette Step 15"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 16 (#6488E2)",
       "value_range": "N/A",
       "absolute_range": "350.1 - 400",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        226,
+        136,
+        100
+      ],
+      "hex": "#6488E2",
+      "palette_step": "Palette Step 16"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 17 (#5C75C9)",
       "value_range": "N/A",
       "absolute_range": "400.1 - 450",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        201,
+        117,
+        92
+      ],
+      "hex": "#5C75C9",
+      "palette_step": "Palette Step 17"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 18 (#576AA4)",
       "value_range": "N/A",
       "absolute_range": "450.1 - 500",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        164,
+        106,
+        87
+      ],
+      "hex": "#576AA4",
+      "palette_step": "Palette Step 18"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 19 (#505F8F)",
       "value_range": "N/A",
       "absolute_range": "500.1 - 550",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        143,
+        95,
+        80
+      ],
+      "hex": "#505F8F",
+      "palette_step": "Palette Step 19"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 20 (#534A88)",
       "value_range": "N/A",
       "absolute_range": "550.1 - 600",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        136,
+        74,
+        83
+      ],
+      "hex": "#534A88",
+      "palette_step": "Palette Step 20"
     },
     {
-      "color": "Dark Blue",
+      "color": "Palette Step 21 (#654E84)",
       "value_range": "N/A",
       "absolute_range": "600.1 - 650",
-      "label": "N/A"
+      "label": "N/A",
+      "bgr": [
+        132,
+        78,
+        101
+      ],
+      "hex": "#654E84",
+      "palette_step": "Palette Step 21"
     }
   ],
   "debug_full_page-19_right.png": [
@@ -2788,7 +4946,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2802,7 +4960,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2816,7 +4974,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Blue",
@@ -2830,7 +4988,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2844,7 +5002,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2859,7 +5017,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2873,7 +5031,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2887,7 +5045,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Blue",
@@ -2901,7 +5059,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2915,7 +5073,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     }
   ],
   "debug_full_page-25_right.png": [],
@@ -2924,7 +5082,7 @@
       "color": "Blue",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "Pronóstico"
+      "label": "Pron\u00f3stico"
     },
     {
       "color": "Light Blue",
@@ -2998,13 +5156,13 @@
       "color": "Light Green",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "75 municipios bajo alerta v... producto del Fenóm..."
+      "label": "75 municipios bajo alerta v... producto del Fen\u00f3m..."
     },
     {
       "color": "Dark Green",
       "value_range": "N/A",
       "absolute_range": "N/A",
-      "label": "75 municipios bajo alerta v... producto del Fenóm..."
+      "label": "75 municipios bajo alerta v... producto del Fen\u00f3m..."
     }
   ],
   "debug_full_page-28_right.png": [

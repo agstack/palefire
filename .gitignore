@@ -7,3 +7,9 @@ datamaps/processed_data/
 *.log
 *.ttl
 test_*.json
+datamaps/raw/
+datamaps/report/*.png
+datamaps/report/*.jpg
+datamaps/report/*.ppm
+datamaps/data_points/
+*.bak

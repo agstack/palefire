@@ -956,6 +956,8 @@ async def query_spatial_datapoints(request: SpatialQueryRequest):
     import urllib.request
     import csv
     import io
+    import re
+    import json
 
     # 1. Resolve coordinates
     resolved_info = {}
@@ -1041,13 +1043,18 @@ async def query_spatial_datapoints(request: SpatialQueryRequest):
         raw_rows = list(csv.reader(io.StringIO(csv_text)))
         if len(raw_rows) >= 2 and raw_rows[1] and raw_rows[1][0] == "Legend":
             row1_legends = raw_rows[1]
-            # Try to fetch croissant jsonld to get page descriptions if possible
+            # Try to fetch croissant jsonld to get page descriptions and default report year
             page_desc = {}
+            dataset_year = "2026"
             try:
                 ld_url = f"{vault_base}/{doc_id}.jsonld"
                 ld_req = urllib.request.Request(ld_url, headers={"User-Agent": "PaleFire/1.0"})
                 with urllib.request.urlopen(ld_req, timeout=5) as r_ld:
                     ld_data = json.loads(r_ld.read().decode("utf-8"))
+                    desc_text = str(ld_data.get("schema:description", "")) + " " + str(ld_data.get("description", ""))
+                    m_yr = re.search(r"(?:19|20)\d{2}", desc_text)
+                    if m_yr:
+                        dataset_year = m_yr.group(0)
                     for dist in ld_data.get("distribution", []):
                         d_name = dist.get("name", "")
                         if "page_" in d_name and dist.get("encodingFormat") == "text/csv":
@@ -1073,13 +1080,28 @@ async def query_spatial_datapoints(request: SpatialQueryRequest):
                     leg = row1_legends[idx + 1] if idx + 1 < len(row1_legends) else ""
                     page_num = (idx // 2) + 1
                     side = "left" if idx % 2 == 0 else "right"
-                    var_desc = page_desc.get(page_num, f"Report Page {page_num:02d}")
+                    raw_desc = page_desc.get(page_num, "")
+                    parts = [p.strip() for p in raw_desc.split("|")] if raw_desc else []
+                    if side == "left":
+                        panel_title = parts[0] if len(parts) > 0 and parts[0] else f"Report Page {page_num:02d}"
+                    else:
+                        panel_title = parts[1] if len(parts) > 1 and parts[1] else (parts[0] if len(parts) > 0 and parts[0] else f"Report Page {page_num:02d}")
+
+                    # Year extraction: extract 4-digit years from title, date_val, or fallback to dataset_year
+                    yrs = re.findall(r"(?:19|20)\d{2}", panel_title)
+                    if not yrs:
+                        date_yrs = re.findall(r"(?:19|20)\d{2}", date_val or "")
+                        yrs = date_yrs if date_yrs else [dataset_year]
+                    year_str = ", ".join(dict.fromkeys(yrs))
+
+                    variable_name = f"{panel_title} ({side} panel)" if f"({side} panel)" not in panel_title.lower() else panel_title
 
                     data_rows.append({
                         "Location": loc,
                         "Page": page_num,
                         "Side": side,
-                        "Variable": f"{var_desc} ({side} panel)",
+                        "Year": year_str,
+                        "Variable": variable_name,
                         "Value": val,
                         "Color": color,
                         "Anomaly": anomaly if anomaly != "Unknown" else val,
@@ -1087,11 +1109,29 @@ async def query_spatial_datapoints(request: SpatialQueryRequest):
                     })
         else:
             reader = csv.DictReader(io.StringIO(csv_text))
+            # Determine page number from request.page or file_key
+            current_page = request.page
+            if current_page is None:
+                m_pg = re.search(r"page_(\d+)", file_key)
+                if m_pg:
+                    current_page = int(m_pg.group(1))
+
             for row in reader:
                 loc = row.get("Location")
-                if matched_dept and loc and matched_dept.lower() in loc.lower():
-                    data_rows.append(row)
-                elif not matched_dept and request.location_name and loc and request.location_name.lower() in loc.lower():
+                if (matched_dept and loc and matched_dept.lower() in loc.lower()) or (not matched_dept and request.location_name and loc and request.location_name.lower() in loc.lower()):
+                    var_str = row.get("Variable", "")
+                    side = row.get("Side", "")
+                    # Extract year from Variable or Date
+                    yrs = re.findall(r"(?:19|20)\d{2}", var_str)
+                    if not yrs:
+                        yrs = re.findall(r"(?:19|20)\d{2}", row.get("Date", "") or "")
+                    if not yrs:
+                        yrs = ["2026"]
+                    row["Year"] = ", ".join(dict.fromkeys(yrs))
+                    if current_page is not None and "Page" not in row:
+                        row["Page"] = current_page
+                    if side and f"({side} panel)" not in var_str.lower():
+                        row["Variable"] = f"{var_str} ({side} panel)"
                     data_rows.append(row)
     except Exception as e:
         logger.error(f"Failed to fetch or parse {file_url}: {e}")

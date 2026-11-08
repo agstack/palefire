@@ -122,7 +122,10 @@ def split_and_convert_to_jsonld(
 
         if src not in grouped:
             grouped[src] = {}
-        grouped[src][loc] = get_color_name(bgr)
+        grouped[src][loc] = {
+            "color_name": get_color_name(bgr),
+            "bgr": bgr
+        }
 
     for src, points in grouped.items():
         page_num, side = parse_source(src)
@@ -167,7 +170,10 @@ def split_and_convert_to_jsonld(
         legend_lookup = {item["color"]: item for item in legend}
 
         graph = []
-        for loc_name, color_name in points.items():
+        for loc_name, pt_info in points.items():
+            color_name = pt_info["color_name"]
+            pt_bgr = pt_info.get("bgr")
+
             if color_name == "Unknown":
                 continue
 
@@ -213,14 +219,24 @@ def split_and_convert_to_jsonld(
                         label = "Unknown"
                         absolute_val = "N/A"
                 else:
-                    mapping = legend_lookup.get(color_name)
+                    # If legend entries have calibrated bgr values, match by closest BGR!
+                    has_bgr_items = [it for it in legend if "bgr" in it]
+                    if has_bgr_items and pt_bgr is not None:
+                        def dist_bgr(c1, c2):
+                            return sum((a - b) ** 2 for a, b in zip(c1, c2)) ** 0.5
+                        best_it = min(has_bgr_items, key=lambda it: dist_bgr(pt_bgr, it["bgr"]))
+                        mapping = best_it
+                        if "color" in best_it:
+                            obs["color"] = best_it["color"]
+                    else:
+                        mapping = legend_lookup.get(color_name)
 
-                    # Fuzzy fallback if exact color is not found
-                    if not mapping:
-                        for k in legend_lookup.keys():
-                            if color_name in k or k in color_name:
-                                mapping = legend_lookup[k]
-                                break
+                        # Fuzzy fallback if exact color is not found
+                        if not mapping:
+                            for k in legend_lookup.keys():
+                                if color_name in k or k in color_name:
+                                    mapping = legend_lookup[k]
+                                    break
 
                     if not mapping:
                         mapping = {}
