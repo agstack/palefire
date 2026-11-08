@@ -205,22 +205,37 @@ def split_and_convert_to_jsonld(
                 # Determine if it's percentage or temperature based on the string
                 if v_range is None:
                     v_range = "Unknown"
+
+                # If v_range is N/A or Unknown but absolute_range exists (e.g. accumulated rainfall maps in mm), use absolute_range
+                effective_val = v_range
+                if (effective_val in ("N/A", "Unknown") or not effective_val) and absolute_val != "N/A":
+                    effective_val = absolute_val
                     
-                if "%" in str(v_range):
-                    obs["value_percentage"] = v_range
-                elif "°C" in str(v_range) or "C" in str(v_range):
-                    obs["value_temperature"] = v_range
+                if "%" in str(effective_val):
+                    obs["value_percentage"] = effective_val
+                elif "°C" in str(effective_val) or "C" in str(effective_val):
+                    obs["value_temperature"] = effective_val
                 else:
-                    obs["value_range"] = v_range
+                    obs["value_range"] = effective_val
 
                 if absolute_val != "N/A":
                     obs["absolute_range"] = absolute_val
 
                 obs["label"] = label
+                parts = []
+                if v_range not in ("N/A", "Unknown"):
+                    parts.append(str(v_range))
                 if absolute_val != "N/A":
-                    obs["value"] = f"{v_range} ({absolute_val}) ({label})"
+                    parts.append(str(absolute_val))
+                if label != "N/A" and label != "Unknown":
+                    parts.append(str(label))
+
+                if parts:
+                    obs["value"] = " - ".join(parts)
+                elif effective_val != "Unknown":
+                    obs["value"] = effective_val
                 else:
-                    obs["value"] = f"{v_range} ({label})" if label != "N/A" else v_range
+                    obs["value"] = "Unknown"
 
             graph.append(obs)
 
@@ -287,8 +302,18 @@ def compile_report(data_dir: str, output_csv: str):
             loc_name = urllib.parse.unquote(loc_url.split("/")[-1]).replace("_", " ")
             v = obs.get("value", "No Map")
             vr = obs.get("value_range", "")
+            ar = obs.get("absolute_range", "")
+            
+            # Prefer rich descriptive value, or value_range / absolute_range
+            chosen_val = v
+            if chosen_val in ("N/A", "Unknown", ""):
+                if vr not in ("N/A", "Unknown", ""):
+                    chosen_val = vr
+                elif ar not in ("N/A", "Unknown", ""):
+                    chosen_val = ar
+
             points[loc_name] = {
-                "value": vr if vr else v,
+                "value": chosen_val,
                 "color": obs.get("color", "Unknown"),
                 "anomaly": obs.get("anomaly", "Unknown")
             }
