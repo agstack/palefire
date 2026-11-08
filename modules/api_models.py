@@ -237,3 +237,31 @@ class EntityExtractionResponse(BaseModel):
     all_entities: List[str] = Field(default_factory=list, description="All entity texts")
     timestamp: str
 
+
+# ============================================================================
+# Spatial / Geocoding Query Models
+# ============================================================================
+
+class SpatialQueryRequest(BaseModel):
+    """Request to query a Vault dataset / document by place name or coordinates."""
+    doc_id: str = Field(..., description="Vault document ID (e.g. 7FOuEOKGMJrGQFnbIdErKQ)")
+    file_name: Optional[str] = Field(None, description="Specific report file (e.g. heatmap_report_page_10.csv or 7FOuEOKGMJrGQFnbIdErKQ_heatmap_report_page_10.csv)")
+    page: Optional[int] = Field(None, description="Report page number if file_name not specified (e.g. 10)")
+    location_name: Optional[str] = Field(None, description="Location to geocode via GeoNames / Nominatim (e.g. 'Sico', 'Tegucigalpa')")
+    lat: Optional[float] = Field(None, description="Explicit latitude")
+    lon: Optional[float] = Field(None, description="Explicit longitude")
+    country_code: str = Field("HN", description="ISO country code (default 'HN')")
+    geonames_username: Optional[str] = Field(None, description="Optional GeoNames username")
+
+
+class SpatialQueryResponse(BaseModel):
+    """Spatial query result containing geocoding information and matched data points."""
+    doc_id: str
+    file_name: str
+    file_url: str
+    resolved_location: Dict[str, Any] = Field(default_factory=dict, description="Resolved coordinates and geocoding source")
+    matched_department: Optional[str] = Field(None, description="Department containing or closest to the coordinates")
+    data_points: List[Dict[str, Any]] = Field(default_factory=list, description="Data points matching the location in the report")
+    timestamp: str
+
+

@@ -47,6 +47,8 @@ from modules.api_models import (
     AgentStatusResponse,
     EntityExtractionRequest,
     EntityExtractionResponse,
+    SpatialQueryRequest,
+    SpatialQueryResponse,
 )
 
 # Configure logging
@@ -891,6 +893,173 @@ async def extract_entities(request: EntityExtractionRequest):
     except Exception as e:
         logger.error(f"Error extracting entities: {e}")
         raise HTTPException(status_code=500, detail=f"Entity extraction failed: {str(e)}")
+
+
+# ============================================================================
+# Spatial & Geocoding Query Endpoints
+# ============================================================================
+
+def _geocode_place(query: str, country: str = "HN", geonames_user: Optional[str] = None):
+    """Geocode a place name using GeoNames API with Nominatim fallback."""
+    import urllib.request
+    import urllib.parse
+    import json
+
+    # 1. Try GeoNames if username configured or provided
+    user = geonames_user or os.environ.get("GEONAMES_USERNAME") or os.environ.get("GEONAMES_USER")
+    if user:
+        try:
+            url = f"http://api.geonames.org/searchJSON?q={urllib.parse.quote(query)}&country={country}&maxRows=5&username={user}"
+            req = urllib.request.Request(url, headers={"User-Agent": "PaleFire/1.0"})
+            with urllib.request.urlopen(req, timeout=5) as r:
+                data = json.loads(r.read().decode())
+                if "geonames" in data and data["geonames"]:
+                    g = data["geonames"][0]
+                    return {
+                        "source": "geonames",
+                        "name": g.get("name"),
+                        "lat": float(g.get("lat")),
+                        "lon": float(g.get("lng")),
+                        "adminName1": g.get("adminName1"),
+                        "countryCode": g.get("countryCode")
+                    }
+        except Exception as e:
+            logger.warning(f"GeoNames lookup failed: {e}")
+
+    # 2. Fallback to OpenStreetMap Nominatim
+    try:
+        url = f"https://nominatim.openstreetmap.org/search?q={urllib.parse.quote(query + ', Honduras')}&format=json&limit=1"
+        req = urllib.request.Request(url, headers={"User-Agent": "PaleFire/1.0 (info@codata.org)"})
+        with urllib.request.urlopen(req, timeout=5) as r:
+            data = json.loads(r.read().decode())
+            if data:
+                item = data[0]
+                return {
+                    "source": "nominatim",
+                    "name": item.get("display_name"),
+                    "lat": float(item.get("lat")),
+                    "lon": float(item.get("lon")),
+                    "countryCode": country
+                }
+    except Exception as e:
+        logger.warning(f"Nominatim lookup failed: {e}")
+
+    return None
+
+
+@app.post("/spatial-query", response_model=SpatialQueryResponse)
+async def query_spatial_datapoints(request: SpatialQueryRequest):
+    """
+    Query Vault report data points by place name (via GeoNames / Nominatim) or coordinates.
+    Finds the containing Honduran department via GeoPandas and retrieves data points from the target CSV.
+    """
+    import urllib.request
+    import csv
+    import io
+
+    # 1. Resolve coordinates
+    resolved_info = {}
+    lat, lon = request.lat, request.lon
+
+    if (lat is None or lon is None) and request.location_name:
+        geo_res = _geocode_place(
+            request.location_name,
+            country=request.country_code,
+            geonames_user=request.geonames_username
+        )
+        if not geo_res:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Could not geocode location '{request.location_name}' in country '{request.country_code}'"
+            )
+        resolved_info = geo_res
+        lat = geo_res["lat"]
+        lon = geo_res["lon"]
+    elif lat is not None and lon is not None:
+        resolved_info = {
+            "source": "coordinates",
+            "lat": lat,
+            "lon": lon,
+            "countryCode": request.country_code
+        }
+    else:
+        raise HTTPException(
+            status_code=400,
+            detail="Either location_name or (lat, lon) must be provided."
+        )
+
+    # 2. Match Honduran Department using GeoPandas
+    matched_dept = None
+    geojson_path = "datamaps/honduras_departments.geojson"
+    if not os.path.exists(geojson_path):
+        geojson_path = "/app/datamaps/honduras_departments.geojson"
+
+    if os.path.exists(geojson_path):
+        try:
+            import geopandas as gpd
+            from shapely.geometry import Point
+
+            gdf = gpd.read_file(geojson_path)
+            pt = Point(lon, lat)
+            matching = gdf[gdf.geometry.contains(pt)]
+            if not matching.empty:
+                matched_dept = matching["shapeName"].values[0]
+            else:
+                # Nearest department boundary
+                dists = gdf.geometry.distance(pt)
+                matched_dept = gdf.loc[dists.idxmin(), "shapeName"]
+        except Exception as e:
+            logger.error(f"GeoPandas spatial matching error: {e}")
+            # Fallback to adminName1 from geocoder if available
+            matched_dept = resolved_info.get("adminName1")
+
+    # 3. Resolve target file
+    doc_id = request.doc_id
+    if request.file_name:
+        fname = request.file_name
+        if not fname.startswith(doc_id):
+            file_key = f"{doc_id}_{fname}"
+        else:
+            file_key = fname
+    elif request.page is not None:
+        file_key = f"{doc_id}_heatmap_report_page_{request.page:02d}.csv"
+    else:
+        file_key = f"{doc_id}_final_heatmap_report.csv"
+
+    # 4. Fetch CSV content
+    vault_base = os.environ.get("VAULT_URL", "https://ai.now.museum/vault")
+    file_url = f"{vault_base}/{file_key}"
+
+    data_rows = []
+    try:
+        # Check local MinIO or HTTP URL
+        req = urllib.request.Request(file_url, headers={"User-Agent": "PaleFire/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            csv_text = r.read().decode("utf-8")
+
+        reader = csv.DictReader(io.StringIO(csv_text))
+        for row in reader:
+            loc = row.get("Location")
+            if matched_dept and loc and matched_dept.lower() in loc.lower():
+                data_rows.append(row)
+            elif not matched_dept and request.location_name and loc and request.location_name.lower() in loc.lower():
+                data_rows.append(row)
+    except Exception as e:
+        logger.error(f"Failed to fetch or parse {file_url}: {e}")
+        raise HTTPException(
+            status_code=502,
+            detail=f"Could not retrieve report data from {file_url}: {str(e)}"
+        )
+
+    return SpatialQueryResponse(
+        doc_id=doc_id,
+        file_name=file_key,
+        file_url=file_url,
+        resolved_location=resolved_info,
+        matched_department=matched_dept,
+        data_points=data_rows,
+        timestamp=datetime.now(timezone.utc).isoformat()
+    )
 
 
 # ============================================================================
