@@ -1037,13 +1037,62 @@ async def query_spatial_datapoints(request: SpatialQueryRequest):
         with urllib.request.urlopen(req, timeout=10) as r:
             csv_text = r.read().decode("utf-8")
 
-        reader = csv.DictReader(io.StringIO(csv_text))
-        for row in reader:
-            loc = row.get("Location")
-            if matched_dept and loc and matched_dept.lower() in loc.lower():
-                data_rows.append(row)
-            elif not matched_dept and request.location_name and loc and request.location_name.lower() in loc.lower():
-                data_rows.append(row)
+        # If final_heatmap_report, parse multi-row layout and attach legend and variable names
+        raw_rows = list(csv.reader(io.StringIO(csv_text)))
+        if len(raw_rows) >= 2 and raw_rows[1] and raw_rows[1][0] == "Legend":
+            row1_legends = raw_rows[1]
+            # Try to fetch croissant jsonld to get page descriptions if possible
+            page_desc = {}
+            try:
+                ld_url = f"{vault_base}/{doc_id}.jsonld"
+                ld_req = urllib.request.Request(ld_url, headers={"User-Agent": "PaleFire/1.0"})
+                with urllib.request.urlopen(ld_req, timeout=5) as r_ld:
+                    ld_data = json.loads(r_ld.read().decode("utf-8"))
+                    for dist in ld_data.get("distribution", []):
+                        d_name = dist.get("name", "")
+                        if "page_" in d_name and dist.get("encodingFormat") == "text/csv":
+                            try:
+                                p_idx = int(d_name.split("page_")[1].split(".")[0])
+                                desc = dist.get("description", "")
+                                if "(" in desc and ")" in desc:
+                                    desc = desc.split("(", 1)[1].rsplit(")", 1)[0]
+                                page_desc[p_idx] = desc
+                            except Exception:
+                                pass
+            except Exception:
+                pass
+
+            dept_rows = [r for r in raw_rows[2:] if (matched_dept and r and matched_dept.lower() in r[0].lower()) or (not matched_dept and request.location_name and r and request.location_name.lower() in r[0].lower())]
+            for idx, r in enumerate(dept_rows):
+                if len(r) >= 5:
+                    loc = r[0]
+                    val = r[1]
+                    date_val = r[2]
+                    color = r[3]
+                    anomaly = r[4]
+                    leg = row1_legends[idx + 1] if idx + 1 < len(row1_legends) else ""
+                    page_num = (idx // 2) + 1
+                    side = "left" if idx % 2 == 0 else "right"
+                    var_desc = page_desc.get(page_num, f"Report Page {page_num:02d}")
+
+                    data_rows.append({
+                        "Location": loc,
+                        "Page": page_num,
+                        "Side": side,
+                        "Variable": f"{var_desc} ({side} panel)",
+                        "Value": val,
+                        "Color": color,
+                        "Anomaly": anomaly if anomaly != "Unknown" else val,
+                        "Legend": leg
+                    })
+        else:
+            reader = csv.DictReader(io.StringIO(csv_text))
+            for row in reader:
+                loc = row.get("Location")
+                if matched_dept and loc and matched_dept.lower() in loc.lower():
+                    data_rows.append(row)
+                elif not matched_dept and request.location_name and loc and request.location_name.lower() in loc.lower():
+                    data_rows.append(row)
     except Exception as e:
         logger.error(f"Failed to fetch or parse {file_url}: {e}")
         raise HTTPException(
