@@ -22,14 +22,56 @@ _LEGEND_HINTS = (
 
 
 def clean_title(text):
-    lines = [line.strip() for line in text.split("\n") if len(line.strip()) > 5]
+    lines = [line.strip() for line in text.split("\n") if len(line.strip()) > 3]
+    header_parts = []
+    
+    # Check for primary variable keywords and date subheaders
+    for line in lines:
+        if any(x in line for x in _NOISE_TOKENS):
+            continue
+        # Strip logo / seal text
+        cleaned = re.sub(r'(@|\bGOBIERNO\b|\bREPÚBLICA\b|\bREPUBLICA\b|\bHONDURAS\b|\bCENAOS\b|\bCOPECO\b).*', '', line, flags=re.I).strip()
+        cleaned = re.sub(r'[\"\'~_–—|;:{}()]+', ' ', cleaned)
+        cleaned = re.sub(r'\s+', ' ', cleaned).strip(' ,.-')
+
+        if len(cleaned) < 4:
+            continue
+
+        upper = cleaned.upper()
+        # 1. Variable name candidate
+        if any(w in upper for w in [
+            'REGISTRO', 'PRONOSTICO', 'PRONÓSTICO', 'NORMA CLIMATICA', 'NORMA CLIMÁTICA',
+            'ANOMALIA', 'ANOMALÍA', 'PRECIPITACION', 'PRECIPITACIÓN', 'TEMPERATURA',
+            'LLUVIA', 'ENSO', 'SST', 'HURRICANE', 'SEASON'
+        ]):
+            if not any(cleaned in existing or existing in cleaned for existing in header_parts):
+                header_parts.append(cleaned)
+        # 2. Date or period candidate (e.g. '01 AL 12 DE JULIO DEL 2026', 'JULIO 2026', 'AGOSTO 2026')
+        elif any(w in upper for w in [
+            'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE',
+            'ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'DEL 2026', '2026'
+        ]):
+            # Try to extract clean date pattern like '01 AL 12 DE JULIO DEL 2026' or 'JULIO 2026'
+            m_date = re.search(r'(\d{1,2}\s+AL\s+\d{1,2}\s+DE\s+[A-ZÁÉÍÓÚÜÑ]+\s+DEL\s+\d{4}|[A-ZÁÉÍÓÚÜÑ]+\s+\d{4})', upper)
+            if m_date:
+                d_str = m_date.group(1)
+                if not any(d_str in existing for existing in header_parts):
+                    header_parts.append(d_str)
+            elif len(cleaned) >= 8:
+                if not any(cleaned in existing or existing in cleaned for existing in header_parts):
+                    header_parts.append(cleaned)
+
+    if header_parts:
+        return " - ".join(header_parts)
+
     clean_lines = []
     for line in lines:
         if any(x in line for x in _NOISE_TOKENS):
             continue
-        if len(line) < 8:
+        cleaned = re.sub(r'(@|\bGOBIERNO\b|\bREPÚBLICA\b|\bREPUBLICA\b|\bHONDURAS\b|\bCENAOS\b|\bCOPECO\b).*', '', line, flags=re.I).strip()
+        if len(cleaned) < 8:
             continue
-        clean_lines.append(line)
+        clean_lines.append(cleaned)
 
     if not clean_lines:
         return "Unknown Title"
