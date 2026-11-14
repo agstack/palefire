@@ -10,6 +10,7 @@ from .csv_parser import CSVParser
 from .pdf_parser import PDFParser
 from .spreadsheet_parser import SpreadsheetParser
 from .url_parser import URLParser
+from .image_parser import ImageParser
 
 __all__ = [
     'BaseParser',
@@ -19,6 +20,7 @@ __all__ = [
     'PDFParser',
     'SpreadsheetParser',
     'URLParser',
+    'ImageParser',
 ]
 
 # Parser registry
@@ -29,6 +31,12 @@ PARSERS = {
     '.xlsx': SpreadsheetParser,
     '.xls': SpreadsheetParser,
     '.ods': SpreadsheetParser,
+    '.jpg': ImageParser,
+    '.jpeg': ImageParser,
+    '.png': ImageParser,
+    '.webp': ImageParser,
+    '.tiff': ImageParser,
+    '.bmp': ImageParser,
 }
 
 
