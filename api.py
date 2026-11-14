@@ -1346,6 +1346,10 @@ async def geoid_query(
                                     m["side"] = p_json["side"]
                                 if "variable_page_title" not in m and "variable_page_title" in p_json:
                                     m["variable_page_title"] = p_json["variable_page_title"]
+                                m["url"] = c_url
+                                if clean_docid:
+                                    m["docid"] = clean_docid
+                                    m["doc_id"] = clean_docid
                                 page_matches.append(m)
                         return page_matches
                 except Exception as ex:
@@ -1366,6 +1370,10 @@ async def geoid_query(
                                         m["side"] = p_json["side"]
                                     if "variable_page_title" not in m and "variable_page_title" in p_json:
                                         m["variable_page_title"] = p_json["variable_page_title"]
+                                    m["url"] = c_url
+                                    if clean_docid:
+                                        m["docid"] = clean_docid
+                                        m["doc_id"] = clean_docid
                                     page_matches.append(m)
                             return page_matches
                     except Exception:
@@ -1384,7 +1392,8 @@ async def geoid_query(
                     None
                 )
                 if csv_dist:
-                    csv_url = csv_dist.get("contentUrl", "").replace("https://ai.mediaquantum.eu/vault/", "http://ciat-api:8000/vault/")
+                    orig_csv_url = csv_dist.get("contentUrl", "")
+                    csv_url = orig_csv_url.replace("https://ai.mediaquantum.eu/vault/", "http://ciat-api:8000/vault/")
                     try:
                         import csv
                         import io
@@ -1400,7 +1409,10 @@ async def geoid_query(
                                         "variable": row[3] if len(row) > 3 else None,
                                         "date": row[4] if len(row) > 4 else None,
                                         "color": row[5] if len(row) > 5 else None,
-                                        "anomaly": row[6] if len(row) > 6 else None
+                                        "anomaly": row[6] if len(row) > 6 else None,
+                                        "url": orig_csv_url,
+                                        "docid": clean_docid,
+                                        "doc_id": clean_docid
                                     })
                     except Exception as ex:
                         logger.warning(f"Fallback CSV fetch failed: {ex}")
