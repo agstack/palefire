@@ -265,3 +265,28 @@ class SpatialQueryResponse(BaseModel):
     timestamp: str
 
 
+class GeoIdQueryRequest(BaseModel):
+    """Request to resolve coordinates into geolocation and optionally search a Vault document."""
+    lat: Optional[float] = Field(None, description="Latitude (e.g. 13.34884)")
+    lon: Optional[float] = Field(None, description="Longitude (e.g. -87.11769)")
+    lng: Optional[float] = Field(None, description="Alias for longitude")
+    coords: Optional[str] = Field(None, description="Coordinates string (e.g. '13.34884, -87.11769')")
+    coordinates: Optional[str] = Field(None, description="Alias for coords string")
+    location_name: Optional[str] = Field(None, description="Optional location / place name to resolve")
+    docid: Optional[str] = Field(None, description="Optional Vault document ID or URL (e.g. NAfoXftXORhSUQZfalr2NQ)")
+    doc_id: Optional[str] = Field(None, description="Alias for docid")
+
+
+class GeoIdQueryResponse(BaseModel):
+    """Response containing reverse-geocoded location, department, and matching document data points."""
+    status: str = "success"
+    coordinates: Dict[str, float] = Field(default_factory=dict, description="Resolved lat and lon")
+    geolocation: Dict[str, Any] = Field(default_factory=dict, description="Detailed reverse-geocoded address/location info")
+    matched_department: Optional[str] = Field(None, description="Department polygon matched via GeoPandas")
+    doc_id: Optional[str] = Field(None, description="Vault document ID queried, if any")
+    total_data_points: int = 0
+    data_points: List[Dict[str, Any]] = Field(default_factory=list, description="Observations/predictions matching this location in the document")
+    timestamp: str
+
+
+

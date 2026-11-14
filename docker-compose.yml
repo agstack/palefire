@@ -78,7 +78,7 @@ services:
       dockerfile: Dockerfile
     container_name: palefire-api
     ports:
-      - "8000:8000"
+      - "8008:8000"
     environment:
       # Neo4j Configuration
       - NEO4J_URI=bolt://neo4j:7687
@@ -124,6 +124,7 @@ services:
       # API Key (optional, for security)
       - OPENAI_API_KEY=dummy-key-for-ollama
     volumes:
+      - .:/app
       - ./logs:/app/logs
       - ./data:/app/data
     depends_on:
@@ -167,6 +168,7 @@ services:
       - SPACY_MODEL=en_core_web_sm
       - LOG_LEVEL=WARNING
     volumes:
+      - .:/app
       - ./logs:/app/logs
       - ./data:/app/data
     depends_on:
@@ -215,6 +217,7 @@ services:
       - LOG_LEVEL=INFO
       - OPENAI_API_KEY=dummy-key-for-ollama
     volumes:
+      - .:/app
       - ./logs:/app/logs
       - ./data:/app/data
     depends_on:

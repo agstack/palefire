@@ -198,6 +198,97 @@ python api.py
 # - ReDoc: http://localhost:8000/redoc
 ```
 
+### GeoID & Reverse Geocoding API (`/api/geoid`)
+
+The `/api/geoid` endpoint turns geographical coordinates into reverse-geocoded addresses, matches administrative boundaries (e.g., Honduran department polygons via GeoPandas), and can optionally cross-reference matching observations, predictions, and climate legends from a Vault document (`docid`).
+
+#### Query Parameters:
+- `lat` *(float)* & `lon` / `lng` *(float)*: Latitude and longitude.
+- `coords` or `coordinates` *(string)*: Comma- or space-separated coordinates string (e.g. `"13.34884, -87.11769"`).
+- `docid` or `doc_id` *(string, optional)*: Vault document ID or URL (e.g. `NAfoXftXORhSUQZfalr2NQ` or `https://ai.mediaquantum.eu/vault/doc/NAfoXftXORhSUQZfalr2NQ`).
+- `location_name` *(string, optional)*: Place name fallback (e.g. `"Choluteca"`).
+
+#### Examples:
+
+**1. Reverse Geocode Coordinates to Location & Department:**
+
+```bash
+curl -s "http://localhost:8000/api/geoid?coords=13.34884,-87.11769"
+```
+
+*Response:*
+```json
+{
+  "status": "success",
+  "coordinates": {
+    "lat": 13.34884,
+    "lon": -87.11769
+  },
+  "geolocation": {
+    "display_name": "Residencial Villas Madrigal, Choluteca, Honduras",
+    "address": {
+      "residential": "Residencial Villas Madrigal",
+      "city": "Choluteca",
+      "state": "Choluteca",
+      "country": "Honduras",
+      "country_code": "hn"
+    }
+  },
+  "matched_department": "Choluteca",
+  "doc_id": null,
+  "total_data_points": 0,
+  "data_points": []
+}
+```
+
+**2. Query Location Data Points from a Vault Document:**
+
+```bash
+curl -s "http://localhost:8000/api/geoid?coords=13.34884,-87.11769&docid=https://ai.mediaquantum.eu/vault/doc/NAfoXftXORhSUQZfalr2NQ"
+```
+
+*Response (excerpt):*
+```json
+{
+  "status": "success",
+  "coordinates": {
+    "lat": 13.34884,
+    "lon": -87.11769
+  },
+  "matched_department": "Choluteca",
+  "doc_id": "NAfoXftXORhSUQZfalr2NQ",
+  "total_data_points": 56,
+  "data_points": [
+    {
+      "@type": "Observation",
+      "name": "Choluteca",
+      "latitude": 13.34884,
+      "longitude": -87.11769,
+      "color": "Yellow-Green",
+      "hex": "#b5db8a",
+      "palette_hex": "#b1f57e",
+      "anomaly": "25.1 - 50 mm",
+      "value_range": "25.1 - 50 mm",
+      "page": 10,
+      "side": "left",
+      "variable_page_title": "REGISTRO DE LLUVIA ACUMULADA GOBIERNO on 6} cENAos (Page 10)"
+    }
+  ]
+}
+```
+
+**3. JSON POST Request:**
+
+```bash
+curl -s -X POST "http://localhost:8000/api/geoid" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "coords": "13.34884, -87.11769",
+    "docid": "NAfoXftXORhSUQZfalr2NQ"
+  }'
+```
+
+
 ## Features
 
 ### Intelligent Question Detection

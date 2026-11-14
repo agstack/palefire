@@ -7,9 +7,9 @@ REST API for Pale Fire knowledge graph search system.
 import asyncio
 import logging
 from datetime import datetime, timezone
-from typing import Optional
+from typing import Optional, Dict, Any, List
 
-from fastapi import FastAPI, HTTPException, BackgroundTasks, UploadFile, File, Form
+from fastapi import FastAPI, HTTPException, BackgroundTasks, UploadFile, File, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import uvicorn
@@ -49,6 +49,8 @@ from modules.api_models import (
     EntityExtractionResponse,
     SpatialQueryRequest,
     SpatialQueryResponse,
+    GeoIdQueryRequest,
+    GeoIdQueryResponse,
 )
 
 # Configure logging
@@ -1147,6 +1149,270 @@ async def query_spatial_datapoints(request: SpatialQueryRequest):
         resolved_location=resolved_info,
         matched_department=matched_dept,
         data_points=data_rows,
+        timestamp=datetime.now(timezone.utc).isoformat()
+    )
+
+
+# ============================================================================
+# GeoID & Coordinates Geolocation Endpoints
+# ============================================================================
+
+def _reverse_geocode(lat: float, lon: float) -> Dict[str, Any]:
+    """Reverse geocode coordinates using OpenStreetMap Nominatim."""
+    import urllib.request
+    import json
+
+    url = f"https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json"
+    headers = {"User-Agent": "PaleFire-GeoID/1.0 (info@mediaquantum.eu)"}
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=6) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except Exception as e:
+        logger.warning(f"Nominatim reverse geocode failed for ({lat}, {lon}): {e}")
+        return {}
+
+
+def _find_containing_department(lat: float, lon: float) -> Optional[str]:
+    """Find Honduran department using GeoPandas polygon contains/nearest check."""
+    geojson_path = os.path.join(os.path.dirname(__file__), "datamaps", "honduras_departments.geojson")
+    if not os.path.exists(geojson_path):
+        geojson_path = os.path.join(os.path.dirname(__file__), "..", "datamaps", "honduras_departments.geojson")
+
+    if os.path.exists(geojson_path):
+        try:
+            import geopandas as gpd
+            from shapely.geometry import Point
+
+            gdf = gpd.read_file(geojson_path)
+            pt = Point(lon, lat)
+            containing = gdf[gdf.geometry.contains(pt)]
+            if not containing.empty:
+                return containing.iloc[0]["shapeName"]
+            # Fallback to nearest department boundary
+            dists = gdf.geometry.distance(pt)
+            return gdf.loc[dists.idxmin(), "shapeName"]
+        except Exception as e:
+            logger.warning(f"GeoPandas department matching error: {e}")
+    return None
+
+
+@app.api_route("/api/geoid", methods=["GET", "POST"], response_model=GeoIdQueryResponse)
+@app.api_route("/geoid", methods=["GET", "POST"], response_model=GeoIdQueryResponse)
+async def geoid_query(
+    request: Request,
+    lat: Optional[float] = None,
+    lon: Optional[float] = None,
+    lng: Optional[float] = None,
+    coords: Optional[str] = None,
+    coordinates: Optional[str] = None,
+    location_name: Optional[str] = None,
+    docid: Optional[str] = None,
+    doc_id: Optional[str] = None,
+):
+    """
+    Resolve coordinates (e.g. 13.34884, -87.11769) into reverse-geocoded geolocation
+    and matched administrative region (department), and optionally query matching data points
+    from a Vault document (docid).
+    """
+    import urllib.request
+    import json
+    import re
+    from datetime import datetime, timezone
+    from concurrent.futures import ThreadPoolExecutor
+
+    # Extract parameters from query string or JSON body if present
+    req_lat = lat
+    req_lon = lon if lon is not None else lng
+    req_coords = coords or coordinates
+    req_loc_name = location_name
+    target_docid = docid or doc_id
+
+    if request.method == "POST":
+        try:
+            body = await request.json()
+            if isinstance(body, dict):
+                req_lat = body.get("lat", req_lat)
+                req_lon = body.get("lon", body.get("lng", req_lon))
+                req_coords = body.get("coords", body.get("coordinates", req_coords))
+                req_loc_name = body.get("location_name", req_loc_name)
+                target_docid = body.get("docid", body.get("doc_id", target_docid))
+        except Exception:
+            pass
+
+    # Parse coords string if provided (e.g. "13.34884, -87.11769" or "13.34884 -87.11769")
+    if req_coords and (req_lat is None or req_lon is None):
+        parts = re.split(r"[\s,]+", req_coords.strip())
+        if len(parts) >= 2:
+            try:
+                req_lat = float(parts[0])
+                req_lon = float(parts[1])
+            except ValueError:
+                pass
+
+    # If coordinates are missing but place name given, try geocoding place name
+    if (req_lat is None or req_lon is None) and req_loc_name:
+        geo_res = _geocode_place(req_loc_name)
+        if geo_res and "lat" in geo_res and "lon" in geo_res:
+            req_lat = geo_res["lat"]
+            req_lon = geo_res["lon"]
+
+    if req_lat is None or req_lon is None:
+        raise HTTPException(
+            status_code=400,
+            detail="Coordinates (lat, lon) or 'coords' (e.g. '13.34884, -87.11769') must be provided."
+        )
+
+    # 1. Reverse geocoding via Nominatim
+    geo_data = _reverse_geocode(req_lat, req_lon)
+
+    # 2. Match Honduran department polygon
+    matched_dept = _find_containing_department(req_lat, req_lon)
+    if not matched_dept and geo_data.get("address"):
+        addr = geo_data["address"]
+        matched_dept = addr.get("state") or addr.get("county") or addr.get("city")
+
+    # 3. Optional dataset search if docid / doc_id is provided
+    doc_results: List[Dict[str, Any]] = []
+    clean_docid: Optional[str] = None
+
+    if target_docid:
+        clean_docid = str(target_docid).strip()
+        # Strip URL prefix if user passed full URL like https://ai.mediaquantum.eu/vault/doc/NAfoXftXORhSUQZfalr2NQ
+        if "/doc/" in clean_docid:
+            clean_docid = clean_docid.split("/doc/")[-1].split(".")[0].split("?")[0].strip()
+        elif "/vault/" in clean_docid:
+            clean_docid = clean_docid.split("/vault/")[-1].split(".")[0].split("?")[0].strip()
+
+        vault_base = os.environ.get("VAULT_URL", "https://ai.mediaquantum.eu/vault")
+        # Ensure vault_base doesn't end with slash
+        vault_base = vault_base.rstrip("/")
+
+        # Fetch Croissant JSON-LD distribution list
+        jsonld_urls = [
+            f"{vault_base}/{clean_docid}.jsonld",
+            f"http://ciat-api:8000/vault/doc/{clean_docid}.jsonld",
+            f"https://ai.mediaquantum.eu/vault/{clean_docid}.jsonld"
+        ]
+        
+        jsonld_data = None
+        for u in jsonld_urls:
+            try:
+                req_obj = urllib.request.Request(u, headers={"User-Agent": "PaleFire-GeoID/1.0"})
+                with urllib.request.urlopen(req_obj, timeout=5) as r:
+                    jsonld_data = json.loads(r.read().decode("utf-8"))
+                    if jsonld_data:
+                        break
+            except Exception:
+                continue
+
+        if jsonld_data:
+            distributions = jsonld_data.get("distribution", [])
+            page_dists = [
+                d for d in distributions
+                if d.get("encodingFormat") in ("application/ld+json", "application/json")
+                and "page_" in d.get("name", "")
+            ]
+
+            target_keywords = []
+            if matched_dept:
+                target_keywords.append(matched_dept.lower())
+            if geo_data.get("address"):
+                addr = geo_data["address"]
+                for k in ["city", "town", "municipality", "village", "state", "county"]:
+                    val = addr.get(k)
+                    if val and val.lower() not in target_keywords:
+                        target_keywords.append(val.lower())
+
+            def fetch_page_obs(dist_item):
+                c_url = dist_item.get("contentUrl", "")
+                if not c_url:
+                    return []
+                # Prefer local docker container network if available
+                fetch_url = c_url.replace("https://ai.mediaquantum.eu/vault/", "http://ciat-api:8000/vault/").replace("http://localhost:7013/vault/", "http://ciat-api:8000/vault/")
+                try:
+                    req_p = urllib.request.Request(fetch_url, headers={"User-Agent": "PaleFire-GeoID/1.0"})
+                    with urllib.request.urlopen(req_p, timeout=5) as r_p:
+                        p_json = json.loads(r_p.read().decode("utf-8"))
+                        obs_list = p_json.get("@graph", []) or p_json.get("observations", [])
+                        page_matches = []
+                        for obs in obs_list:
+                            obs_name = (obs.get("name") or obs.get("location") or "").lower()
+                            if any(kw in obs_name for kw in target_keywords):
+                                m = dict(obs)
+                                if "page" not in m and "page" in p_json:
+                                    m["page"] = p_json["page"]
+                                if "side" not in m and "side" in p_json:
+                                    m["side"] = p_json["side"]
+                                if "variable_page_title" not in m and "variable_page_title" in p_json:
+                                    m["variable_page_title"] = p_json["variable_page_title"]
+                                page_matches.append(m)
+                        return page_matches
+                except Exception as ex:
+                    # Retry with original public contentUrl
+                    try:
+                        req_p = urllib.request.Request(c_url, headers={"User-Agent": "PaleFire-GeoID/1.0"})
+                        with urllib.request.urlopen(req_p, timeout=5) as r_p:
+                            p_json = json.loads(r_p.read().decode("utf-8"))
+                            obs_list = p_json.get("@graph", []) or p_json.get("observations", [])
+                            page_matches = []
+                            for obs in obs_list:
+                                obs_name = (obs.get("name") or obs.get("location") or "").lower()
+                                if any(kw in obs_name for kw in target_keywords):
+                                    m = dict(obs)
+                                    if "page" not in m and "page" in p_json:
+                                        m["page"] = p_json["page"]
+                                    if "side" not in m and "side" in p_json:
+                                        m["side"] = p_json["side"]
+                                    if "variable_page_title" not in m and "variable_page_title" in p_json:
+                                        m["variable_page_title"] = p_json["variable_page_title"]
+                                    page_matches.append(m)
+                            return page_matches
+                    except Exception:
+                        return []
+
+            if page_dists:
+                # Concurrent fetch of page JSONs
+                with ThreadPoolExecutor(max_workers=10) as executor:
+                    results = executor.map(fetch_page_obs, page_dists)
+                    for r_items in results:
+                        doc_results.extend(r_items)
+            else:
+                # Fallback to final_heatmap_report.csv
+                csv_dist = next(
+                    (d for d in distributions if "final_heatmap_report.csv" in d.get("name", "") or "final_heatmap_report.csv" in d.get("contentUrl", "")),
+                    None
+                )
+                if csv_dist:
+                    csv_url = csv_dist.get("contentUrl", "").replace("https://ai.mediaquantum.eu/vault/", "http://ciat-api:8000/vault/")
+                    try:
+                        import csv
+                        import io
+                        req_c = urllib.request.Request(csv_url, headers={"User-Agent": "PaleFire-GeoID/1.0"})
+                        with urllib.request.urlopen(req_c, timeout=6) as r_c:
+                            lines = list(csv.reader(io.StringIO(r_c.read().decode("utf-8"))))
+                            for row in lines[2:]:
+                                if row and any(kw in row[0].lower() for kw in target_keywords):
+                                    doc_results.append({
+                                        "name": row[0],
+                                        "page": row[1] if len(row) > 1 else None,
+                                        "side": row[2] if len(row) > 2 else None,
+                                        "variable": row[3] if len(row) > 3 else None,
+                                        "date": row[4] if len(row) > 4 else None,
+                                        "color": row[5] if len(row) > 5 else None,
+                                        "anomaly": row[6] if len(row) > 6 else None
+                                    })
+                    except Exception as ex:
+                        logger.warning(f"Fallback CSV fetch failed: {ex}")
+
+    return GeoIdQueryResponse(
+        status="success",
+        coordinates={"lat": req_lat, "lon": req_lon},
+        geolocation=geo_data,
+        matched_department=matched_dept,
+        doc_id=clean_docid,
+        total_data_points=len(doc_results),
+        data_points=doc_results,
         timestamp=datetime.now(timezone.utc).isoformat()
     )
 
