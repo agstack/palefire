@@ -545,6 +545,8 @@ async def clean_database():
 async def parse_file(
     file: UploadFile = File(...),
     file_type: Optional[str] = Form(None, description="Override file type detection (txt, csv, pdf, xlsx, xls, ods)"),
+    engine: Optional[str] = Form(None, description="OCR engine(s) to use, e.g. ['tesseract', 'ollama_gemma4:31b-cloud', 'microsoft_trocr']"),
+    ollama_visual_model: Optional[str] = Form(None, description="Ollama visual model to use (e.g. gemma4:31b, gemma4:31b-cloud)"),
     delimiter: Optional[str] = Form(None, description="CSV delimiter (for CSV files)"),
     include_headers: bool = Form(True, description="Include headers in CSV output"),
     max_pages: Optional[int] = Form(None, description="Maximum pages to parse (for PDF files)", ge=1),
@@ -590,7 +592,11 @@ async def parse_file(
             daemon = get_daemon(use_spacy=extract_keywords and keywords_method == 'ner')
             
             # Prepare parser options
-            parser_options = {}
+            parser_options = {'original_filename': file.filename if file.filename else ''}
+            if engine:
+                parser_options['engine'] = engine
+            if ollama_visual_model:
+                parser_options['ollama_visual_model'] = ollama_visual_model
             if delimiter:
                 parser_options['delimiter'] = delimiter
             if not include_headers:

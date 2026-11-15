@@ -59,7 +59,7 @@ transformers==4.35.2
 huggingface-hub==0.23.5
 numpy<2.0.0
 openai
-mcp
+mcp<2
 
 
 
