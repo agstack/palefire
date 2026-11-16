@@ -116,26 +116,50 @@ class ImageParser(BaseParser):
             return {"error": str(e)}
 
         prompt = (
-            "You are an expert document and image visual analyst.\n\n"
-            "Analyze this image/file carefully and perform two tasks:\n"
+            "You are an expert visual analyst and Croissant metadata specialist.\n\n"
+            "Analyze this image/file carefully and perform the following tasks:\n"
             "1. Provide a detailed description of the visual and textual content of the image.\n"
-            "2. Classify the main visual content into exactly ONE of the following 3 categories:\n"
-            "   - 'table with data'\n"
-            "   - 'map'\n"
-            "   - 'other'\n\n"
-            "Classification criteria:\n"
-            "- 'table with data': Structured tabular layout, calendar grids, spreadsheets, data tables with rows/columns of numbers or measurements.\n"
-            "- 'map': Geographic maps, spatial diagrams, cartographic charts, satellite or topographic representations.\n"
-            "- 'other': Plain text documents, general photographs, receipts, diagrams/charts that are not maps or tabular data grids, or miscellaneous imagery.\n\n"
-            "Also, if the image contains daily or monthly rainfall or weather measurements (e.g. Alliance Bioversity CIAT), "
-            "extract the Month, Year, Community/Location, Observer, and reported measurements/totals.\n\n"
-            "Respond ONLY with valid JSON in the following format:\n"
+            "2. Classify the main visual content into exactly ONE category, such as:\n"
+            "   - 'map' (geographic maps, cartographic charts, spatial weather/meteorological representations)\n"
+            "   - 'table with data' (structured tabular layout, spreadsheets, logbook grids, rainfall record sheets)\n"
+            "   - 'human' (people, portraits, community members, field workers)\n"
+            "   - 'nature' (natural landscapes, vegetation, agriculture, sky, water, weather events)\n"
+            "   - 'document' (plain text reports, receipts, letters, official forms)\n"
+            "   - 'other' (miscellaneous imagery)\n"
+            "3. SPECIFICALLY mention if any data or measurements in the image are for a single DAY (daily, 24-hour period) or a whole MONTH (monthly), or cumulative period.\n"
+            "4. Produce an initial valid Croissant JSON-LD object describing this image dataset.\n\n"
+            "Also, if the image contains rainfall or weather measurements (e.g. Alliance Bioversity CIAT, CENAOS/WRF), "
+            "extract the Month, Day, Year, Time Period, Location/Community, Observer/Institution, and reported measurements/totals.\n\n"
+            "Respond ONLY with valid JSON conforming to this format:\n"
             "{\n"
-            '  "description": "<detailed description of the file content>",\n'
-            '  "category": "<must be exactly one of: table with data | map | other>",\n'
+            '  "description": "<detailed description of the file content explicitly stating whether data is for day or month>",\n'
+            '  "category": "<must be one of: map | table with data | human | nature | document | other>",\n'
+            '  "temporal_resolution": "<must specifically state: day | month | cumulative | not applicable>",\n'
+            '  "temporal_period": "<exact day/date or month/year represented in the data>",\n'
             '  "confidence": 0.0 - 1.0,\n'
-            '  "reasoning": "<short explanation for why this category was selected>",\n'
-            '  "extracted_details": "<optional key-value summary of data extracted>"\n'
+            '  "reasoning": "<short explanation for why this category and temporal scope were selected>",\n'
+            '  "extracted_details": {\n'
+            '    "temporal_scope": "<day or month>",\n'
+            '    "time_period": "<exact dates, e.g. 06Z07OCT2022 to 06Z08OCT2022>",\n'
+            '    "location": "<location/region>",\n'
+            '    "measurement_type": "<e.g. 24-hour accumulated precipitation (mm)>"\n'
+            '  },\n'
+            '  "croissant": {\n'
+            '    "@context": {\n'
+            '      "@vocab": "http://schema.org/",\n'
+            '      "sc": "http://schema.org/",\n'
+            '      "cr": "http://mlcommons.org/croissant/",\n'
+            '      "dct": "http://purl.org/dc/terms/"\n'
+            '    },\n'
+            '    "@type": "sc:Dataset",\n'
+            '    "name": "<dataset title derived from image>",\n'
+            '    "description": "<dataset description specifically mentioning if data is for day or month>",\n'
+            '    "keywords": ["<keyword1>", "<keyword2>"],\n'
+            '    "unmappedFields": [\n'
+            '      {"field": "visual_category", "value": "<category>"},\n'
+            '      {"field": "temporal_resolution", "value": "<day or month>"}\n'
+            '    ]\n'
+            '  }\n'
             "}"
         )
 
@@ -174,14 +198,27 @@ class ImageParser(BaseParser):
                             selected_cat = "table with data"
                         elif "map" in cat or "geographic" in cat or "spatial" in cat:
                             selected_cat = "map"
+                        elif "human" in cat or "person" in cat or "people" in cat:
+                            selected_cat = "human"
+                        elif "nature" in cat or "landscape" in cat or "plant" in cat:
+                            selected_cat = "nature"
+                        elif "doc" in cat or "text" in cat:
+                            selected_cat = "document"
                         else:
-                            selected_cat = "other"
+                            selected_cat = cat or "other"
+
+                        temp_res = str(parsed.get("temporal_resolution", "")).strip().lower()
+                        temp_period = str(parsed.get("temporal_period", "")).strip()
+                        croissant_obj = parsed.get("croissant")
 
                         return {
                             "success": True,
                             "model": m_try,
                             "endpoint": ep,
                             "category": selected_cat,
+                            "temporal_resolution": temp_res,
+                            "temporal_period": temp_period,
+                            "croissant": croissant_obj,
                             "confidence": parsed.get("confidence", 1.0),
                             "description": parsed.get("description", raw_ans),
                             "reasoning": parsed.get("reasoning", ""),
@@ -565,7 +602,11 @@ class ImageParser(BaseParser):
             metadata['visual_description'] = gemma_eval.get('description')
             metadata['visual_confidence'] = gemma_eval.get('confidence')
             metadata['visual_reasoning'] = gemma_eval.get('reasoning')
+            metadata['temporal_resolution'] = gemma_eval.get('temporal_resolution')
+            metadata['temporal_period'] = gemma_eval.get('temporal_period')
             metadata['gemma_vision_analysis'] = gemma_eval.get('response')
+            if gemma_eval.get('croissant'):
+                metadata['initial_croissant'] = gemma_eval.get('croissant')
         if sheet_table:
             metadata['has_spreadsheet'] = True
             metadata['community'] = sheet_table['community']
@@ -576,6 +617,62 @@ class ImageParser(BaseParser):
             metadata['total_precipitation_mm'] = sum(float(r[2]) for r in sheet_table['rows'])
             if len(tables) > 1:
                 metadata['months_detected'] = [st['month_name'] for st in tables]
+
+        # If a map was analyzed with vision and has extracted_details or description, build map table and enrich text
+        if not tables and gemma_eval.get('success'):
+            analysis_obj = gemma_eval.get('structured_analysis') or {}
+            details = analysis_obj.get('extracted_details')
+            desc = gemma_eval.get('visual_description') or analysis_obj.get('description', '')
+            category = gemma_eval.get('visual_category') or analysis_obj.get('category', '')
+            
+            map_rows = []
+            if isinstance(details, dict):
+                for k, v in details.items():
+                    prop_name = k.replace('_', ' ').title()
+                    map_rows.append([prop_name, str(v)])
+            elif isinstance(details, str) and details.strip():
+                map_rows.append(["Extracted Details", details.strip()])
+            
+            if category:
+                map_rows.append(["Visual Category", category.title()])
+            if gemma_eval.get('temporal_resolution'):
+                map_rows.append(["Temporal Resolution", gemma_eval.get('temporal_resolution').title()])
+            if gemma_eval.get('temporal_period'):
+                map_rows.append(["Temporal Period", gemma_eval.get('temporal_period')])
+            if gemma_eval.get('model'):
+                map_rows.append(["Vision Model", gemma_eval.get('model')])
+
+            if map_rows:
+                map_table_dict = {
+                    "headers": ["Property", "Value"],
+                    "rows": map_rows,
+                    "name": "map_extracted_metadata",
+                    "month_name": (details.get("Month") if isinstance(details, dict) else "") or ""
+                }
+                tables.append(map_table_dict)
+
+            # Build enriched markdown representation
+            map_md = f"# Map Analysis: {kwargs.get('original_filename') or Path(file_path).name}\n\n"
+            if width and height:
+                map_md += f"- **Dimensions:** {width}x{height} pixels ({format_name})\n"
+            map_md += f"- **Visual Category:** {category}\n"
+            map_md += f"- **Analysis Engine:** {engine_desc}\n\n"
+            
+            if desc:
+                map_md += "## Visual Map Description\n\n"
+                map_md += f"{desc}\n\n"
+
+            if map_rows:
+                map_md += "## Extracted Map Values\n\n"
+                map_md += "| Property | Value |\n"
+                map_md += "| :--- | :--- |\n"
+                for r in map_rows:
+                    map_md += f"| {r[0]} | {r[1]} |\n"
+                map_md += "\n"
+
+            map_md += "## OCR Text Content\n\n"
+            map_md += extracted_text if extracted_text else "_[No text detected by OCR]_"
+            output_text = map_md
 
         return ParseResult(
             text=output_text,
