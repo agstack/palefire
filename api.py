@@ -1435,6 +1435,135 @@ async def geoid_query(
     )
 
 
+@app.post("/datamaps/run")
+async def run_datamaps_pipeline(request: Request):
+    """
+    Run the Datamaps two-map-per-page (left/right) CV & GeoPandas pipeline.
+    Extracts left/right map panels across all pages, resolves department color anomalies,
+    splits into semantic JSON-LD datasets, and compiles both master and per-map CSVs.
+    """
+    import sys
+    import io
+    import csv
+    import json
+    import shutil
+    import tempfile
+    import urllib.request
+
+    body = {}
+    try:
+        body = await request.json()
+    except Exception:
+        pass
+    url = body.get("url") or request.query_params.get("url", "")
+
+    dm_root = "/app/datamaps"
+    if not os.path.exists(dm_root):
+        dm_root = os.path.join(os.path.dirname(__file__), "datamaps")
+    if dm_root not in sys.path:
+        sys.path.insert(0, dm_root)
+
+    from datamaps.compiler import split_and_convert_to_jsonld, compile_report
+
+    tmp_dir = tempfile.mkdtemp(prefix="datamaps_job_")
+    try:
+        orig_cwd = os.getcwd()
+        os.chdir(dm_root)
+        try:
+            dataset_path = os.path.join(dm_root, "data", "pdf_full_dataset.json")
+            titles_path = os.path.join(dm_root, "report", "titles.json")
+            raw_dir = os.path.join(dm_root, "raw")
+
+            # If dataset_path doesn't exist or fresh extraction is needed from a custom PDF URL
+            if not os.path.exists(dataset_path) and url:
+                import fitz
+                import cv2
+                import numpy as np
+                import geopandas as gpd
+                from datamaps.extractor import process_image
+
+                req = urllib.request.Request(url, headers={"User-Agent": "PaleFire-Datamaps/1.0"})
+                with urllib.request.urlopen(req, timeout=60) as resp:
+                    pdf_bytes = resp.read()
+                doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+                rep_dir = os.path.join(tmp_dir, "report")
+                os.makedirs(rep_dir, exist_ok=True)
+                gdf = gpd.read_file(os.path.join(dm_root, "honduras_departments.geojson"))
+                geo_bounds = gdf.total_bounds
+                dataset = []
+                for idx, page in enumerate(doc, start=1):
+                    pix = page.get_pixmap(dpi=288)
+                    png_path = os.path.join(rep_dir, f"full_page-{idx:02d}.png")
+                    pix.save(png_path)
+                    dataset.extend(process_image(png_path, gdf, geo_bounds, rep_dir))
+                dataset_path = os.path.join(tmp_dir, "pdf_full_dataset.json")
+                with open(dataset_path, "w", encoding="utf-8") as f_ds:
+                    json.dump({"data": dataset}, f_ds, indent=2)
+
+            out_pts = os.path.join(tmp_dir, "data_points")
+            out_csv = os.path.join(tmp_dir, "final_heatmap_report.csv")
+            split_and_convert_to_jsonld(dataset_path, titles_path, out_pts, raw_dir=raw_dir)
+            compile_report(out_pts, out_csv)
+
+            with open(out_csv, "r", encoding="utf-8") as f_c:
+                master_csv = f_c.read()
+
+            per_map_items = []
+            for fn in sorted(os.listdir(out_pts)):
+                if not fn.endswith(".json"):
+                    continue
+                fp = os.path.join(out_pts, fn)
+                with open(fp, "r", encoding="utf-8") as f_j:
+                    dp = json.load(f_j)
+                page_num = dp.get("page")
+                side = dp.get("side", "single")
+                title = dp.get("variable_page_title", "")
+                legend_lines = dp.get("legend") or []
+                legend_str = " | ".join(legend_lines)
+
+                buf = io.StringIO()
+                writer = csv.writer(buf)
+                writer.writerow(["Location", "Page", "Side", "Variable_Page_Title", "Color", "Hex", "Anomaly", "Value", "Value_Range", "Absolute_Range", "Latitude", "Longitude", "Legend"])
+                for obs in dp.get("@graph", []):
+                    writer.writerow([
+                        obs.get("name", ""),
+                        page_num,
+                        side,
+                        title,
+                        obs.get("color", ""),
+                        obs.get("hex", ""),
+                        obs.get("anomaly", ""),
+                        obs.get("value", ""),
+                        obs.get("value_range") or obs.get("value_percentage") or obs.get("value_temperature") or "",
+                        obs.get("absolute_range", ""),
+                        obs.get("latitude", ""),
+                        obs.get("longitude", ""),
+                        legend_str
+                    ])
+
+                per_map_items.append({
+                    "page": page_num,
+                    "side": side,
+                    "title": title,
+                    "jsonld_filename": fn,
+                    "jsonld": dp,
+                    "csv": buf.getvalue()
+                })
+
+            per_map_items.sort(key=lambda x: (x.get("page") or 999, 0 if x.get("side") == "left" else 1))
+            return {
+                "status": "success",
+                "url": url,
+                "total_maps": len(per_map_items),
+                "master_csv": master_csv,
+                "maps": per_map_items
+            }
+        finally:
+            os.chdir(orig_cwd)
+    finally:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+
+
 # ============================================================================
 # Main
 # ============================================================================
