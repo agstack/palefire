@@ -135,6 +135,9 @@ services:
       - "host.docker.internal:host-gateway"
     networks:
       - palefire-network
+      - semantic-croissant_default
+    networks:
+      - palefire-network
     healthcheck:
       test: [ "CMD-SHELL", "curl -f http://localhost:8000/health || exit 1" ]
       interval: 30s
@@ -252,3 +255,5 @@ volumes:
 networks:
   palefire-network:
     driver: bridge
+  semantic-croissant_default:
+    external: true
