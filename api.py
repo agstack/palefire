@@ -1492,9 +1492,9 @@ async def run_datamaps_image(request: Request):
                     continue
                 w.writerow([
                     r.get("name") or r.get("Department") or "",
-                    r.get("shapeID") or r.get("GeoID") or r.get("id") or "",
-                    r.get("lat") or r.get("Latitude") or "",
-                    r.get("lon") or r.get("Longitude") or "",
+                    r.get("shapeID") or r.get("GeoID") or r.get("geoid") or r.get("GEOID") or r.get("id") or "",
+                    r.get("lat") or r.get("latitude") or r.get("Latitude") or "",
+                    r.get("lon") or r.get("longitude") or r.get("Longitude") or "",
                     r.get("color_hex") or r.get("Color_Hex") or "",
                     r.get("color_name") or r.get("Color_Name") or "",
                     r.get("legend_label") or r.get("Legend_Label") or "",
