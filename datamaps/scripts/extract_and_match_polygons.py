@@ -945,8 +945,8 @@ def main():
                 if ln and not ln.startswith("#") and "=" in ln:
                     k, v = ln.split("=", 1)
                     env_vars[k.strip()] = v.strip()
-        ollama_host = env_vars.get("OLLAMA_HOST", "http://localhost:11434").replace("host.docker.internal", "localhost").rstrip("/")
-        model = env_vars.get("OLLAMA_VISUAL_MODEL", "gemma4:31b-cloud")
+        ollama_host = (os.environ.get("OLLAMA_HOST") or env_vars.get("OLLAMA_HOST") or "http://localhost:11434").rstrip("/")
+        model = os.environ.get("OLLAMA_VISUAL_MODEL") or env_vars.get("OLLAMA_VISUAL_MODEL") or "gemma4:31b"
         _, buf = cv2.imencode(".jpg", img)
         b64_img = base64.b64encode(buf.tobytes()).decode("ascii")
         prompt = (
