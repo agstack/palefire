@@ -1473,11 +1473,33 @@ async def run_datamaps_image(request: Request):
             cmd.extend(["--country", country])
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
         csv_files = glob.glob(os.path.join(tmp_dir, "*.csv"))
-        if not csv_files:
-            return {"status": "error", "detail": f"No CSV produced (rc={proc.returncode}): {proc.stderr[-300:]}"}
-        with open(csv_files[0], "r", encoding="utf-8") as f:
-            csv_text = f.read()
-        return {"status": "success", "csv_text": csv_text}
+        if csv_files:
+            with open(csv_files[0], "r", encoding="utf-8") as f:
+                csv_text = f.read()
+            return {"status": "success", "csv_text": csv_text}
+        if os.path.exists(out_json):
+            import csv as _csv, io as _io, json as _json
+            with open(out_json, "r", encoding="utf-8") as f:
+                jdata = _json.load(f)
+            rows = jdata.get("regions") or jdata.get("polygons") or jdata.get("results") or (jdata if isinstance(jdata, list) else [])
+            buf = _io.StringIO()
+            w = _csv.writer(buf)
+            w.writerow(["Department", "GeoID", "Latitude", "Longitude", "Color_Hex", "Color_Name", "Legend_Label", "Value"])
+            for r in rows:
+                if not isinstance(r, dict):
+                    continue
+                w.writerow([
+                    r.get("name") or r.get("Department") or "",
+                    r.get("shapeID") or r.get("GeoID") or r.get("id") or "",
+                    r.get("lat") or r.get("Latitude") or "",
+                    r.get("lon") or r.get("Longitude") or "",
+                    r.get("color_hex") or r.get("Color_Hex") or "",
+                    r.get("color_name") or r.get("Color_Name") or "",
+                    r.get("legend_label") or r.get("Legend_Label") or "",
+                    r.get("value") or r.get("Value") or r.get("legend_label") or "",
+                ])
+            return {"status": "success", "csv_text": buf.getvalue()}
+        return {"status": "error", "detail": f"No CSV or JSON produced (rc={proc.returncode}): {proc.stderr[-300:]}"}
 
 
 @app.post("/datamaps/run")
