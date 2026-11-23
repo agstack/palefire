@@ -1454,8 +1454,26 @@ async def run_datamaps_image(request: Request):
     country = body.get("country") or request.query_params.get("country", "")
     if not country:
         u_low = url.lower()
-        for cname in ("France", "Honduras", "Netherlands", "Germany", "Spain", "Italy", "USA", "UK", "Brazil", "India", "China"):
-            if cname.lower() in u_low:
+        _country_aliases = {
+            "france": "France",
+            "honduras": "Honduras",
+            "netherlands": "Netherlands",
+            "nederland": "Netherlands",
+            "germany": "Germany",
+            "deutschland": "Germany",
+            "spain": "Spain",
+            "espana": "Spain",
+            "italy": "Italy",
+            "italia": "Italy",
+            "usa": "USA",
+            "uk": "UK",
+            "brazil": "Brazil",
+            "brasil": "Brazil",
+            "india": "India",
+            "china": "China",
+        }
+        for kw, cname in _country_aliases.items():
+            if kw in u_low:
                 country = cname
                 break
 
