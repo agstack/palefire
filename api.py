@@ -1451,6 +1451,14 @@ async def run_datamaps_image(request: Request):
     if not url:
         return {"status": "error", "detail": "Missing url"}
 
+    country = body.get("country") or request.query_params.get("country", "")
+    if not country:
+        u_low = url.lower()
+        for cname in ("France", "Honduras", "Netherlands", "Germany", "Spain", "Italy", "USA", "UK", "Brazil", "India", "China"):
+            if cname.lower() in u_low:
+                country = cname
+                break
+
     dm_root = "/app/datamaps"
     if not os.path.exists(dm_root):
         dm_root = os.path.join(os.path.dirname(__file__), "datamaps")
@@ -1461,6 +1469,8 @@ async def run_datamaps_image(request: Request):
     with tempfile.TemporaryDirectory() as tmp_dir:
         out_json = os.path.join(tmp_dir, "matched.json")
         cmd = ["python3", script, url, "--auto-describe", "-o", out_json]
+        if country:
+            cmd.extend(["--country", country])
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
         csv_files = glob.glob(os.path.join(tmp_dir, "*.csv"))
         if not csv_files:
