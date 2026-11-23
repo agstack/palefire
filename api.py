@@ -1435,6 +1435,41 @@ async def geoid_query(
     )
 
 
+@app.post("/datamaps/image")
+async def run_datamaps_image(request: Request):
+    """Run extract_and_match_polygons.py --auto-describe on a single map image URL."""
+    import glob
+    import subprocess
+    import tempfile
+
+    body = {}
+    try:
+        body = await request.json()
+    except Exception:
+        pass
+    url = body.get("url") or request.query_params.get("url", "")
+    if not url:
+        return {"status": "error", "detail": "Missing url"}
+
+    dm_root = "/app/datamaps"
+    if not os.path.exists(dm_root):
+        dm_root = os.path.join(os.path.dirname(__file__), "datamaps")
+    script = os.path.join(dm_root, "scripts", "extract_and_match_polygons.py")
+    if not os.path.exists(script):
+        return {"status": "error", "detail": f"Script not found: {script}"}
+
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        out_json = os.path.join(tmp_dir, "matched.json")
+        cmd = ["python3", script, url, "--auto-describe", "-o", out_json]
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        csv_files = glob.glob(os.path.join(tmp_dir, "*.csv"))
+        if not csv_files:
+            return {"status": "error", "detail": f"No CSV produced (rc={proc.returncode}): {proc.stderr[-300:]}"}
+        with open(csv_files[0], "r", encoding="utf-8") as f:
+            csv_text = f.read()
+        return {"status": "success", "csv_text": csv_text}
+
+
 @app.post("/datamaps/run")
 async def run_datamaps_pipeline(request: Request):
     """
