@@ -1453,7 +1453,8 @@ async def run_datamaps_image(request: Request):
 
     country = body.get("country") or request.query_params.get("country", "")
     if not country:
-        u_low = url.lower()
+        page_url = body.get("page_url") or ""
+        u_low = f"{url} {page_url}".lower()
         _country_aliases = {
             "france": "France",
             "honduras": "Honduras",
