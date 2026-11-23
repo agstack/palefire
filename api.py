@@ -1452,31 +1452,34 @@ async def run_datamaps_image(request: Request):
         return {"status": "error", "detail": "Missing url"}
 
     country = body.get("country") or request.query_params.get("country", "")
+    adm = body.get("adm") or request.query_params.get("adm") or ""
     if not country:
-        page_url = body.get("page_url") or ""
-        u_low = f"{url} {page_url}".lower()
-        _country_aliases = {
-            "france": "France",
-            "honduras": "Honduras",
-            "netherlands": "Netherlands",
-            "nederland": "Netherlands",
-            "germany": "Germany",
-            "deutschland": "Germany",
-            "spain": "Spain",
-            "espana": "Spain",
-            "italy": "Italy",
-            "italia": "Italy",
-            "usa": "USA",
-            "uk": "UK",
-            "brazil": "Brazil",
-            "brasil": "Brazil",
-            "india": "India",
-            "china": "China",
-        }
-        for kw, cname in _country_aliases.items():
-            if kw in u_low:
-                country = cname
-                break
+        try:
+            import base64 as _b64, json as _json, re as _re, requests as _req
+            _img_r = _req.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+            if _img_r.status_code == 200 and len(_img_r.content) > 1000:
+                _b64_img = _b64.b64encode(_img_r.content).decode("ascii")
+                _ohost = os.environ.get("OLLAMA_HOST", "http://10.147.18.24:11444").rstrip("/")
+                _ov = _req.post(
+                    f"{_ohost}/api/generate",
+                    json={
+                        "model": os.environ.get("OLLAMA_FAST_VISION_MODEL", "gemma4:e4b"),
+                        "prompt": 'Identify the country shown on this map and the administrative level of its polygons (ADM1 for states/provinces/first-level, ADM2 for departments/counties/second-level). Return ONLY JSON: {"country": "<English country name>", "adm": "ADM1" or "ADM2"}',
+                        "images": [_b64_img],
+                        "stream": False,
+                    },
+                    timeout=60,
+                )
+                if _ov.status_code == 200:
+                    _raw = _ov.json().get("response", "")
+                    _m = _re.search(r"\{.*\}", _raw, _re.DOTALL)
+                    if _m:
+                        _meta = _json.loads(_m.group(0))
+                        country = (_meta.get("country") or "").strip()
+                        if not adm and _meta.get("adm") in ("ADM1", "ADM2"):
+                            adm = _meta["adm"]
+        except Exception as _e_oc:
+            print(f"Warning: Ollama country detection failed: {_e_oc}")
 
     dm_root = "/app/datamaps"
     if not os.path.exists(dm_root):
@@ -1485,7 +1488,7 @@ async def run_datamaps_image(request: Request):
     if not os.path.exists(script):
         return {"status": "error", "detail": f"Script not found: {script}"}
 
-    adm = body.get("adm") or request.query_params.get("adm") or ("ADM2" if country in ("France", "Italy") else "ADM1")
+    adm = adm or "ADM1"
 
     with tempfile.TemporaryDirectory() as tmp_dir:
         out_json = os.path.join(tmp_dir, "matched.json")
