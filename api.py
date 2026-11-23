@@ -1485,7 +1485,7 @@ async def run_datamaps_image(request: Request):
     if not os.path.exists(script):
         return {"status": "error", "detail": f"Script not found: {script}"}
 
-    adm = body.get("adm") or request.query_params.get("adm") or ("ADM2" if country == "France" else "ADM1")
+    adm = body.get("adm") or request.query_params.get("adm") or ("ADM2" if country in ("France", "Italy") else "ADM1")
 
     with tempfile.TemporaryDirectory() as tmp_dir:
         out_json = os.path.join(tmp_dir, "matched.json")
