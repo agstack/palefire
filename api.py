@@ -1473,7 +1473,7 @@ async def run_datamaps_image(request: Request):
         cmd = ["python3", script, url, "--auto-describe", "--adm", adm, "-o", out_json]
         if country:
             cmd.extend(["--country", country])
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         csv_files = glob.glob(os.path.join(tmp_dir, "*.csv"))
         if csv_files:
             with open(csv_files[0], "r", encoding="utf-8") as f:

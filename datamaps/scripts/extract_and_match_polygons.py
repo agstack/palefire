@@ -962,7 +962,7 @@ def main():
                 data=json.dumps({"model": model, "prompt": prompt, "images": [b64_img], "stream": False}).encode("utf-8"),
                 headers={"Content-Type": "application/json"},
             )
-            with urllib.request.urlopen(req, timeout=120) as resp:
+            with urllib.request.urlopen(req, timeout=600) as resp:
                 raw_txt = json.loads(resp.read().decode("utf-8")).get("response", "")
                 m = re.search(r"\{.*\}", raw_txt, re.DOTALL)
                 if m:
